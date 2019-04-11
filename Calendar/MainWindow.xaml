@@ -1,0 +1,15 @@
+﻿<telerik:RadRibbonWindow x:Class="Calendar.MainWindow"
+                         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                         xmlns:local="clr-namespace:Calendar"
+                         Icon="Images/Calendar-01.ico"
+                         UseLayoutRounding="True"
+                         WindowState="Maximized"
+                         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                         xmlns:schedule="clr-namespace:Calendar.Views.Schedule"
+                         WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Background="#7FF0F0F0">
+    <Grid>
+        <!--<schedule:Mains/>-->
+        <local:CalendarView />
+    </Grid>
+</telerik:RadRibbonWindow>

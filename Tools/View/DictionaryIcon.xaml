@@ -1,0 +1,21 @@
+﻿<ResourceDictionary x:Class="Tools.View.DictionaryIcon"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Tools.View"
+                    xmlns:Properties="clr-namespace:Tools.Properties">
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Tools;component/Properties/Resources.resx" />
+    </ResourceDictionary.MergedDictionaries>-->
+    <DataTemplate x:Key="Pdf.ico">
+        <Image Source="/Tools;component/Image/Pdf.ico" Stretch="None" Height="32" Width="32"/>
+    </DataTemplate>
+    <DataTemplate x:Key="Editor.ico">
+        <Image Source="/Tools;component/Image/Editor.ico" Stretch="None" Height="32" Width="32" />
+    </DataTemplate>
+    <DataTemplate x:Key="Tools.ico">
+        <Image Source="/Tools;component/Image/Tools.ico" Stretch="None" Height="32" Width="32"/>
+    </DataTemplate>
+    <DataTemplate x:Key="Explorer.ico">
+        <Image Source="/Tools;component/Image/Explorer.ico" Stretch="None" Height="32" Width="32"/>
+    </DataTemplate>
+</ResourceDictionary>

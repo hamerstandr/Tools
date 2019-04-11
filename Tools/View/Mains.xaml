@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Tools.View.Mains"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tools.View"
+             mc:Ignorable="d" Width="200.5" Height="179.5">
+    <Grid>
+        <ListView x:Name="Diagrams1" Background="{x:Null}">
+            <ListViewItem HorizontalContentAlignment="Center">
+                <Button Click="Button_Click" Content="Image Editor"/>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Center">
+                <Button Content="Flie Eplorer" Click="Button_Click_1"/>
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Center">
+                <Button Content="Pdf Veiwer" Click="Button_Click_2" />
+            </ListViewItem>
+            <ListViewItem HorizontalContentAlignment="Center">
+                <Button Content="Diagrams" Click="Button_Click_3"/>
+            </ListViewItem>
+        </ListView>
+    </Grid>
+</UserControl>

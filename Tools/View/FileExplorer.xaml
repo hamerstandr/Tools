@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Tools.View.FileExplorer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Tools.View"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:fileDialogs="clr-namespace:Telerik.Windows.Controls.FileDialogs;assembly=Telerik.Windows.Controls.FileDialogs"
+             xmlns:telerikQuickStart="clr-namespace:Telerik.Windows.Controls.QuickStart;assembly=QuickStart.Common"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <telerikQuickStart:QuickStart.ExampleHeader>
+        <TextBlock Text="File Explorer Control" Margin="8" />
+    </telerikQuickStart:QuickStart.ExampleHeader>
+    <Grid>
+
+        <fileDialogs:ExplorerControl    x:Name="explorer"
+                                        Multiselect="{Binding IsChecked, ElementName=multiselectCheckBox, Mode=TwoWay}"
+                                        IsDragDropEnabled="{Binding IsChecked, ElementName=dragdropCheckBox, Mode=TwoWay}"
+                                        ExpandToCurrentDirectory="{Binding IsChecked, ElementName=expandToCurrDirCheckBox,Mode=TwoWay}"
+                                        FilterIndex="{Binding SelectedIndex, ElementName=filterCombo, Mode=TwoWay}"
+                                        ShowHiddenFiles="{Binding IsChecked, ElementName=showHiddenFiles, Mode=TwoWay}"/>
+    </Grid>
+
+    <telerikQuickStart:QuickStart.ConfigurationPanel>
+        <StackPanel Margin="3">
+            <CheckBox Content="Multiselect" Margin="3" x:Name="multiselectCheckBox" IsChecked="True"/>
+            <CheckBox Content="IsDragDropEnabled" Margin="3" x:Name="dragdropCheckBox" IsChecked="True"/>
+            <CheckBox Content="ExpandToCurrentDirectory" Margin="3" x:Name="expandToCurrDirCheckBox"/>
+            <CheckBox Content="ShowHiddenFiles" Margin="3" x:Name="showHiddenFiles"/>
+
+            <Rectangle Height="1" HorizontalAlignment="Stretch" Margin="3 10 3 3" Fill="Gray" />
+
+            <TextBlock Text="Filter:" Margin="0 5 0 0" />
+            <!--<telerik:RadComboBox Margin="0 3 0 0" ItemsSource="{Binding FilterDescriptors, ElementName=explorer}" SelectedIndex="7" DisplayMemberPath="FilterName" x:Name="filterCombo"/>-->
+
+            <TextBlock Text="Selected Safe File Names:" Margin="0 5 0 0" />
+            <!--<ListBox ItemsSource="{Binding SelectedSafeFileNames, ElementName=explorer}" Margin="0 3 0 0" MinHeight="60" MaxHeight="230"/>-->
+        </StackPanel>
+    </telerikQuickStart:QuickStart.ConfigurationPanel>
+</UserControl>
