@@ -1588,10 +1588,40 @@
             </summary>
             <value>The reading mode.</value>
         </member>
+        <member name="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Model.Converters.TypeAwareConverter`1">
+            <summary>
+            Converts a PDF dictionary to a concrete object instance based on some type property in the dictionary.
+            </summary>
+            <typeparam name="T">The type of the type property.</typeparam>
+        </member>
         <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Old.Pdf.OldToProcessingTranslator.GetColorSpaceObjectFromColorSpaceOld(Telerik.Windows.Documents.Fixed.FormatProviders.Old.Pdf.DocumentModel.Core.ColorSpaces.ColorSpaceOld)">
             <summary>
             Returns <see cref="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Model.Elements.ColorSpaces.ColorSpaceObject"/> from <see cref="T:Telerik.Windows.Documents.Fixed.FormatProviders.Old.Pdf.DocumentModel.Core.ColorSpaces.ColorSpaceOld"/>. 
             Not implemented for all types! Throws not implemented exception for the non-implemented conversion.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.IPagesCacheManager">
+            <summary>
+            Class responsible for page content caching operations.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.IPagesCacheManager.SavePage(Telerik.Windows.Documents.Fixed.Model.RadFixedPage)">
+            <summary>
+            Preserves all currently applied changes of the page content in memory.
+            </summary>
+            <param name="page">The page instance.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.IPagesCacheManager.BeginUsingPage(Telerik.Windows.Documents.Fixed.Model.RadFixedPage)">
+            <summary>
+            Loads the page content.
+            </summary>
+            <param name="page">The page instance.</param>
+            <returns>A disposable object responsible for 
+            unloading the page content.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.IPagesCacheManager.Clear">
+            <summary>
+            Clears the cached content.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfSingleLineWriter">
@@ -7612,6 +7642,11 @@
             Represents the decode parameters collection.
             </summary>
         </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Text.Internal.TextDocumentOld.CreateTextPage(System.Int32)">
+            <summary>
+            TODO Make base method private when Old model is deleted.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters.PdfFilterNames">
             <summary>
             Contains valid names for PDF filters.
@@ -7695,7 +7730,7 @@
         <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters.PdfObject.GetColorSpaceInternal``1">
             <summary>
             Returns <see cref="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Model.Elements.ColorSpaces.ColorSpaceObject"/> from this.dictionary when using PdfProcessing model;
-            and <see cref="T:Telerik.Windows.Documents.Fixed.FormatProviders.Old.Pdf.DocumentModel.Core.ColorSpaces.ColorSpaceOld"/> when using PdfViewer model.
+            and ColorSpaceOld when using PdfViewer model.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Filters.PdfObject.GetColorSpaceObject">
@@ -15765,18 +15800,6 @@
             </summary>
             <value>The annotations.</value>
         </member>
-        <member name="P:Telerik.Windows.Documents.Fixed.Model.Internal.RadFixedDocumentInternal.Selection">
-            <summary>
-            Gets the selection of the document.
-            </summary>
-            <value>The selection.</value>
-        </member>
-        <member name="P:Telerik.Windows.Documents.Fixed.Model.Internal.RadFixedDocumentInternal.CaretPosition">
-            <summary>
-            Gets or sets the caret position in the document.
-            </summary>
-            <value>The caret position.</value>
-        </member>
         <member name="T:Telerik.Windows.Documents.Fixed.Model.Internal.RadFixedPageInternal">
             <summary>
             Represents a fixed page.
@@ -15843,16 +15866,20 @@
             Represents PDF import settings.
             </summary>
         </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.PdfImportSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.PdfImportSettings"/> class.
+            </summary>
+        </member>
         <member name="E:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.PdfImportSettings.UserPasswordNeeded">
             <summary>
             Occurs when the user password is needed.
             </summary>
         </member>
-        <member name="T:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Model.Converters.TypeAwareConverter`1">
+        <member name="P:Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Import.PdfImportSettings.ReadingMode">
             <summary>
-            Converts a PDF dictionary to a concrete object instance based on some type property in the dictionary.
+            Gets or sets the mode for loading page content.
             </summary>
-            <typeparam name="T">The type of the type property.</typeparam>
         </member>
         <member name="T:Telerik.Windows.Documents.Fixed.Model.Actions.GoToAction">
             <summary>
@@ -16891,6 +16918,11 @@
             Represents the interactive form properties of the current document.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.PageMode">
+            <summary>
+            Gets or sets how the document should be displayed when opened.
+            </summary>
+        </member>
         <member name="E:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.OnException">
             <summary>
             Occurs when exception is thrown. This property only works with RadPdfViewer.
@@ -16898,7 +16930,7 @@
         </member>
         <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.Selection">
             <summary>
-            Gets the selection of the document. This property only works with RadPdfViewer.
+            Gets the selection of the document.
             </summary>
             <value>The selection.</value>
         </member>
@@ -16908,9 +16940,9 @@
             </summary>
             <value>The caret position.</value>
         </member>
-        <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.PageMode">
+        <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.CacheManager">
             <summary>
-            Gets or sets how the document should be displayed when opened.
+            Gets or sets the Cache Manager responsible for page content caching operations.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.Bookmarks">
@@ -16982,12 +17014,6 @@
             </summary>
             <value>The height.</value>
         </member>
-        <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedPage.PageNo">
-            <summary>
-            Gets the current page number. This property only works with RadPdfViewer.
-            </summary>
-            <value>The page no.</value>
-        </member>
         <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedPage.HasContent">
             <summary>
             Gets a value indicating if the page has content. This property only works with RadPdfViewer.
@@ -16999,6 +17025,12 @@
             Gets the document that contains the page. This property only works with RadPdfViewer.
             </summary>
             <value>The document.</value>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Fixed.Model.RadFixedPage.PageNo">
+            <summary>
+            Gets the current page number. This property only works with RadPdfViewer.
+            </summary>
+            <value>The page no.</value>
         </member>
         <member name="T:Telerik.Windows.Documents.Fixed.Model.Resources.FormSource">
             <summary>
@@ -17053,12 +17085,6 @@
             </summary>
             <param name="stream">The stream.</param>
         </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(System.Windows.Media.Imaging.BitmapSource)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
-            </summary>
-            <param name="bitmapSource">The bitmap source.</param>
-        </member>
         <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(System.IO.Stream,Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality)">
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
@@ -17066,18 +17092,24 @@
             <param name="stream">The stream.</param>
             <param name="imageQuality">The image quality.</param>
         </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
+            </summary>
+            <param name="imageSourceInfo">The image source info.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(System.Windows.Media.Imaging.BitmapSource)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
+            </summary>
+            <param name="bitmapSource">The bitmap source.</param>
+        </member>
         <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(System.Windows.Media.Imaging.BitmapSource,Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality)">
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
             </summary>
             <param name="bitmapSource">The bitmap source.</param>
             <param name="imageQuality">The image quality.</param>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.#ctor(Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource"/> class.
-            </summary>
-            <param name="imageSourceInfo">The image source info.</param>
         </member>
         <member name="M:Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.GetEncodedImageData">
             <summary>
@@ -17301,6 +17333,23 @@
             <param name="renderer">The actual UI renderer implementation.</param>
             <param name="tiling">The tiling instance.</param>
         </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.FixedPageContentRenderingHelper.RenderNormalAnnotationAppearance(Telerik.Windows.Documents.Fixed.Utilities.Rendering.IFixedContentRenderer,Telerik.Windows.Documents.Fixed.Model.Annotations.Annotation)">
+            <summary>
+            Renders the normal annotation appearance. This appearance is used when the annotation 
+            is not interacting with the user. The appearance is also used for printing the annotation.
+            </summary>
+            <param name="renderer">The actual UI renderer implementation.</param>
+            <param name="annotation">The annotation instance.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.FixedPageContentRenderingHelper.RenderDownAnnotationAppearance(Telerik.Windows.Documents.Fixed.Utilities.Rendering.IFixedContentRenderer,Telerik.Windows.Documents.Fixed.Model.Annotations.Annotation)">
+            <summary>
+            Renders the down annotation appearance. This appearance is used when the pointing device 
+            of the viewer is pressed or held down within the annotation’s active area. When not present, 
+            the annotation normal appearance.
+            </summary>
+            <param name="renderer">The actual UI renderer implementation.</param>
+            <param name="annotation">The annotation instance.</param>
+        </member>
         <member name="P:Telerik.Windows.Documents.Fixed.Utilities.Rendering.GeometryRenderingContext.Geometry">
             <summary>
             The rendered geometry.
@@ -17389,26 +17438,20 @@
             A helper class dedicated for layout related calculations of a fixed page.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.#ctor(Telerik.Windows.Documents.Fixed.Model.Common.IFixedPage)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper"/> class.
-            </summary>
-            <param name="page">The related fixed page instance.</param>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetVisibleContentBox">
+        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetVisibleContentBox(Telerik.Windows.Documents.Fixed.Model.Common.IFixedPage)">
             <summary>
             Gets the rectangle of the visible region of the page, i.e. the intersection 
             between the MediaBox and the CropBox properties of the page.
             </summary>
             <returns>The visible page content rectangle.</returns>
         </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetActualWidth">
+        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetActualWidth(Telerik.Windows.Documents.Fixed.Model.Common.IFixedPage)">
             <summary>
             Gets the width of the visible page content boundaries. This method considers the rotation of the page.
             </summary>
             <returns>The width of the rotated page content to be displayed.</returns>
         </member>
-        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetActualHeight">
+        <member name="M:Telerik.Windows.Documents.Fixed.Utilities.Rendering.PageLayoutHelper.GetActualHeight(Telerik.Windows.Documents.Fixed.Model.Common.IFixedPage)">
             <summary>
             Gets the height of the visible page content boundaries. This method considers the rotation of the page.
             </summary>
@@ -17552,9 +17595,14 @@
         </member>
         <member name="M:Telerik.Windows.Documents.Fixed.Selection.TextSelection.GetSelectedTextAsync(System.Action{System.String})">
             <summary>
-            Gets the selected text async.
+            Gets the selected text asynchronously. The callback is called on the Dispatcher.
             </summary>
             <param name="callback">The callback.</param>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Fixed.Selection.TextSelection.GetSelectedTextAsync">
+            <summary>
+            Gets the selected text async.
+            </summary>
         </member>
         <member name="M:Telerik.Windows.Documents.Fixed.Selection.TextSelection.ToString">
             <summary>

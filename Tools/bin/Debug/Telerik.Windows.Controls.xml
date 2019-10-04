@@ -3598,6 +3598,22 @@
             Sets the visual appearance of the chrome not to render in Normal mode.
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Controls.RadToggleSwitchButton">
+            <summary>
+            A ToggleSwitch button control.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadToggleSwitchButton.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.RadToggleSwitchButton"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadToggleSwitchButton.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event. This method is invoked whenever <see cref="P:System.Windows.FrameworkElement.IsInitialized"/> is set to true internally.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
         <member name="T:Telerik.Windows.Controls.Chromes.ButtonChrome">
             <summary>
             Renders visual states of a button.
@@ -6990,6 +7006,35 @@
             Not supported.
             </summary>
             <returns>The value.</returns>
+        </member>
+        <member name="T:Telerik.Windows.Controls.ObjectToTypeConverter">
+            <summary>
+            An IValueConverter that converts an object to a Type based on the parameter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ObjectToTypeConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts an object value to Type.
+            </summary>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.ObjectToTypeConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not implemented.
+            </summary>
+            <param name="value">The value that is produced by the binding target.</param>
+            <param name="targetType">The type to convert to.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+            <returns>
+            A converted value. If the method returns null, the valid null value is used.
+            </returns>
         </member>
         <member name="T:Telerik.Windows.Controls.UppercaseConverter">
             <summary>
@@ -12531,6 +12576,15 @@
         <member name="M:Telerik.Windows.Controls.MarkupExtensions.DynamicResourceProxy.CreateInstanceCore">
             <inheritdoc />
         </member>
+        <member name="M:Telerik.Windows.Controls.MarkupExtensions.DynamicResourceProxy.FreezeCore(System.Boolean)">
+            <summary>
+            Makes the <see cref="T:System.Windows.Freezable"/> object unmodifiable or tests whether it can be made unmodifiable.
+            </summary>
+            <param name="isChecking">True to return an indication of whether the object can be frozen (without actually freezing it); false to actually freeze the object.</param>
+            <returns>
+            If <paramref name="isChecking"/> is true, this method returns true if the <see cref="T:System.Windows.Freezable"/> can be made unmodifiable, or false if it cannot be made unmodifiable. If <paramref name="isChecking"/> is false, this method returns true if the if the specified <see cref="T:System.Windows.Freezable"/> is now unmodifiable, or false if it cannot be made unmodifiable.
+            </returns>
+        </member>
         <member name="P:Telerik.Windows.Controls.MarkupExtensions.DynamicResourceProxy.ProxyValue">
             <summary>
             Gets or sets the value to be exposed by the proxy.
@@ -12880,6 +12934,26 @@
         <member name="F:Telerik.Windows.Controls.MaterialControls.FluentControl.EffectModeProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.MaterialControls.FluentControl.EffectMode"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.MaterialControls.FluentControl.ScrollBarModeResourceKeyProperty">
+            <summary>
+            Identifies the ScrollBarModeResourceKey attached property.
+            </summary>
+            <remarks>
+            	<para>
+            		This property is used for internal purposes only.
+            	</para>
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.MaterialControls.FluentControl.GetScrollBarModeResourceKey(System.Windows.DependencyObject)">
+            <summary>
+            Gets the scrollbar mode resource key. 
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.MaterialControls.FluentControl.SetScrollBarModeResourceKey(System.Windows.DependencyObject,System.String)">
+            <summary>
+            Sets the scrollbar mode resource key. 
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.MaterialControls.FluentControl.#ctor">
@@ -22382,6 +22456,16 @@
             Matches items, containing the search text. Case sensitive.
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019Theme">
+            <summary>
+            VisualStudio2019Theme class represents the key to the VisualStudio2019 theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019Theme.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Theme"/> class.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.FluentTheme">
             <summary>
             FluentTheme class represents the key to the Fluent theme.
@@ -23173,9 +23257,19 @@
             The key for the <see cref="T:Telerik.Windows.Controls.FluentPalette"/>'s FocusThickness.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.FluentResourceKeyID.ScrollBarMode">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.FluentPalette"/>'s ScrollBarMode.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.FluentResourceKey">
             <summary>
             Keys for the <see cref="T:Telerik.Windows.Controls.FluentPalette"/> resources.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.FluentResourceKey.ScrollBarMode">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.FluentPalette"/>'s AccentBrush.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.FluentResourceKey.AccentBrush">
@@ -26715,6 +26809,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.Office2013Palette.FontFamily"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Office2013Palette.DisabledOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Office2013Palette.DisabledOpacity"/> dependency property.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Office2013Palette.Palette">
             <summary>
             Holds the Palette singleton instance.
@@ -26843,6 +26942,11 @@
         <member name="P:Telerik.Windows.Controls.Office2013Palette.FontFamily">
             <summary>
             Gets or sets the <see cref="P:Telerik.Windows.Controls.Office2013Palette.FontFamily"/> used in normal texts.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Office2013Palette.DisabledOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.Office2013Palette.DisabledOpacity"/> used in disabled states.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.Office2013Palette.ColorVariation">
@@ -27015,6 +27119,11 @@
             The key for the <see cref="T:Telerik.Windows.Controls.Office2013Palette"/>'s FontSizeXL.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Office2013ResourceKeyID.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Office2013Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.Office2013ResourceKey">
             <summary>
             Keys for the <see cref="T:Telerik.Windows.Controls.Office2013Palette"/> resources.
@@ -27143,6 +27252,11 @@
         <member name="F:Telerik.Windows.Controls.Office2013ResourceKey.FontFamily">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.Office2013Palette"/>'s FontFamily.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Office2013ResourceKey.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Office2013Palette"/>'s DisabledOpacity.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.Office2013ResourceKey.ToString">
@@ -27968,6 +28082,16 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.HeaderColor"/> dependency property. 
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBackgroundColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBackgroundColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBorderColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBorderColor"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.FontSizeXXXSProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.FontSizeXXXS"/> dependency property.
@@ -28011,6 +28135,16 @@
         <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.FontFamilyProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.FontFamily"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.DisabledOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.DisabledOpacity"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyOpacity"/> dependency property.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.Palette">
@@ -28098,6 +28232,16 @@
             Gets or sets the color of the VisualStudio2013Theme's header elements.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBackgroundColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2013Theme's read only background elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyBorderColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2013Theme's read only border elements.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.FontSizeXXXS">
             <summary>
             Gets or sets the font size for extra extra extra small text.
@@ -28141,6 +28285,16 @@
         <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.FontFamily">
             <summary>
             Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.FontFamily"/> used in normal texts.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.DisabledOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.DisabledOpacity"/> used in disabled states.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2013Palette.ReadOnlyOpacity"/> used in readonly states.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.VisualStudio2013Palette.ColorVariation">
@@ -28288,6 +28442,16 @@
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s SemiSelectedBrush.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyBackgroundBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.ReadOnlyBorderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyBorderBrush.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.FontSizeXXXS">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s FontSizeXXXS.
@@ -28331,6 +28495,16 @@
         <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.FontFamily">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s FontFamily.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKeyID.ReadOnlyOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyOpacity.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.VisualStudio2013ResourceKey">
@@ -28438,6 +28612,16 @@
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s SemiSelectedBrush.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKey.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyBackgroundBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKey.ReadOnlyBorderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyBorderBrush.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKey.FontSizeXXXS">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s FontSizeXXXS.
@@ -28483,6 +28667,16 @@
             The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s FontFamily.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKey.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2013ResourceKey.ReadOnlyOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2013Palette"/>'s ReadOnlyOpacity.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.VisualStudio2013ResourceKey.ToString">
             <inheritdoc />
         </member>
@@ -28498,6 +28692,803 @@
             <inheritdoc />
         </member>
         <member name="M:Telerik.Windows.Controls.VisualStudio2013ResourceKeyTypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019Palette">
+            <summary>
+            Hold resources used in the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Theme"/> theme.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.IsFreezableProperty">
+            <summary>
+            Identifies the IsFreezable DependencyProperty.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019Palette.GetIsFreezable(System.Windows.DependencyObject)">
+            <summary>
+            Gets the IsFreezable value from a DependencyObject.
+            </summary>
+            <param name="dependencyObject">The dependencyObject.</param>
+            <returns>The IsFreezable value.</returns>+
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019Palette.SetIsFreezable(System.Windows.DependencyObject,System.Boolean)">
+            <summary>
+            Sets the IsFreezable value from a DependencyObject.
+            </summary>
+            <param name="dependencyObject">The dependencyObject.</param>
+            <param name="value">The IsFreezable value.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019Palette.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019Palette.LoadPreset(Telerik.Windows.Controls.VisualStudio2019Palette.ColorVariation)">
+            <summary>
+            Loads a preset.
+            </summary>
+            <param name="preset">The color preset.</param>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.DefaultForegroundColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.DefaultForegroundColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMainColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMainColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentDarkColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentDarkColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentSecondaryDarkColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentSecondaryDarkColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMouseOverColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMouseOverColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AccentFocusedColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentFocusedColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ValidationColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ValidationColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.BasicColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.BasicColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.SemiBasicColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.SemiBasicColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.PrimaryColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.PrimaryColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerInvertedColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerInvertedColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.IconColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.IconColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.AlternativeColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.AlternativeColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.SecondaryColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.SecondaryColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.MouseOverColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.MouseOverColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ComplementaryColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ComplementaryColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.MainColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.MainColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.HeaderColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.HeaderColor"/> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBackgroundColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBackgroundColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBorderColorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBorderColor"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXXSProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXXS"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXSProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXS"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXSProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXS"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeSProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeS"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSize"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeLProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeL"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXLProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXL"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXLProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXL"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.FontFamilyProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontFamily"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.DisabledOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.DisabledOpacity"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyOpacity"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.Palette">
+            <summary>
+            Holds the Palette singleton instance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.DefaultForegroundColor">
+            <summary>
+            Gets or sets the foreground of some of the VisualStudio2019Theme's elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's elements in their MouseOver, Active, Toggled and Focused visual states.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMainColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's accent main elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentDarkColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's accent dark elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentSecondaryDarkColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's accent dark elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentMouseOverColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's mouse over accent elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AccentFocusedColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's focused elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.ValidationColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's elements which support validation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.BasicColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's basic elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.SemiBasicColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's elements that are in MouseOver state. It is BasicColor with 40% opacity.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.PrimaryColor">
+            <summary>
+            Gets or sets the background color of the VisualStudio2019Theme's elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerColor">
+            <summary>
+            Gets or sets the foreground of text/glyphs of the VisualStudio2019Theme's elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.MarkerInvertedColor">
+            <summary>
+            Gets or sets the foreground of text/glyphs of the VisualStudio2019Theme's elements when their background changes to accent.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.IconColor">
+            <summary>
+            Gets or sets the path fill of the VisualStudio2019Theme's elements that are in Normal State. Also used for RadWatermark content and RadGridView filters.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.AlternativeColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's elements that have alternative background.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.SecondaryColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's Focus/Open effects.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.MouseOverColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's MouseOver/Hover effects.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.ComplementaryColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's Slider control and elements in Disabled visual state.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.MainColor">
+            <summary>
+            Gets or sets the background color of the VisualStudio2019Theme's elements with direct input.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.HeaderColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's header elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBackgroundColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's read only background elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyBorderColor">
+            <summary>
+            Gets or sets the color of the VisualStudio2019Theme's read only border elements.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXXS">
+            <summary>
+            Gets or sets the font size for extra extra extra small text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXS">
+            <summary>
+            Gets or sets the font size for extra extra small text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXS">
+            <summary>
+            Gets or sets the font size for extra small text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeS">
+            <summary>
+            Gets or sets the font size for small text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSize">
+            <summary>
+            Gets or sets the font size for normal text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeL">
+            <summary>
+            Gets or sets the font size for large text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXL">
+            <summary>
+            Gets or sets the font size for extra large text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontSizeXXL">
+            <summary>
+            Gets or sets the font size for extra extra large text.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontFamily">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.FontFamily"/> used in normal texts.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.DisabledOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.DisabledOpacity"/> used in disabled states.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.VisualStudio2019Palette.ReadOnlyOpacity"/> used in readonly states.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019Palette.ColorVariation">
+            <summary>
+            Represents theme color variations.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019Palette.ColorVariation.Blue">
+            <summary>
+            Represents the default Blue VisualStudio2019 theme palette.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019ResourceKeyTypeConverter">
+            <summary>
+            Used to convert <see cref="T:System.Windows.ResourceKey"/> types used in <see cref="T:Telerik.Windows.Controls.VisualStudio2019ResourceKey"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019ResourceKeyTypeConverter.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019ResourceKeyTypeConverter.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019ResourceDictionary">
+            <summary>
+            A <see cref="T:System.Windows.ResourceDictionary"/> that merges the resources from the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019ResourceDictionary.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.VisualStudio2019ResourceDictionary"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019ResourceExtension">
+            <summary>
+            A <see cref="T:System.Windows.Markup.MarkupExtension"/> that allows access to the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/> resources from XAML.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019ResourceExtension.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.VisualStudio2019ResourceExtension"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID">
+            <summary>
+            A key for a <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/> resource.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.DefaultForegroundColor">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s DefaultForegroundColor.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentMainBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentMainBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentDarkBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentDarkBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentSecondaryDarkBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentSecondaryDarkBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentMouseOverBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentMouseOverBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AccentFocusedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentFocusedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.ValidationBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ValidationBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.BasicBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s BasicBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.SemiBasicBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SemiBasicBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.PrimaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s PrimaryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.SecondaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SecondaryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.MarkerBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MarkerBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.MarkerInvertedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MarkerInvertedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.IconBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s IconBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.AlternativeBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AlternativeBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.MouseOverBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MouseOverBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.ComplementaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ComplementaryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.MainBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MainBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.HeaderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s HeaderBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.QualityPoorBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualityPoorBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.QualitySatisfactoryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualitySatisfactoryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.QualityGoodBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualityGoodBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.SemiSelectedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SemiSelectedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyBackgroundBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.ReadOnlyBorderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyBorderBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeXXXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeXXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSize">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSize.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeXL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontSizeXXL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.FontFamily">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontFamily.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKeyID.ReadOnlyOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyOpacity.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.VisualStudio2019ResourceKey">
+            <summary>
+            Keys for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/> resources.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.DefaultForegroundColor">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s DefaultForegroundColor.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentMainBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentMainBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentDarkBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentDarkBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentSecondaryDarkBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentSecondaryDarkBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentMouseOverBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentMouseOverBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AccentFocusedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AccentFocusedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ValidationBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ValidationBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.BasicBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s BasicBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.SemiBasicBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SemiBasicBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.PrimaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s PrimaryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.MarkerBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MarkerBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.MarkerInvertedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MarkerInvertedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.IconBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s IconBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.AlternativeBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s AlternativeBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.SecondaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SelectedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.MouseOverBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MouseOverBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ComplementaryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ComplementaryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.MainBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s MainBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.HeaderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s HeaderBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.QualityPoorBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualityPoorBrush. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.QualitySatisfactoryBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualitySatisfactoryBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.QualityGoodBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s QualityGoodBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.SemiSelectedBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s SemiSelectedBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ReadOnlyBackgroundBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyBackgroundBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ReadOnlyBorderBrush">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyBorderBrush.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeXXXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeXXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeXS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeS">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeS.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSize">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSize.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeXL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontSizeXXL">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontSizeXXL.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.FontFamily">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s FontFamily.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ReadOnlyOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.VisualStudio2019Palette"/>'s ReadOnlyOpacity.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.VisualStudio2019ResourceKey.ToString">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.VisualStudio2019ResourceKey.Assembly">
             <inheritdoc />
         </member>
         <member name="T:Telerik.Windows.Controls.TransparentTheme">
@@ -28688,6 +29679,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.Windows8TouchPalette.FontFamilyStrong"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Windows8TouchPalette.DisabledOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Windows8TouchPalette.DisabledOpacity"/> dependency property.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Windows8TouchPalette.Palette">
             <summary>
             Holds the Palette singleton instance.
@@ -28786,6 +29782,11 @@
         <member name="P:Telerik.Windows.Controls.Windows8TouchPalette.FontFamilyStrong">
             <summary>
             Gets or sets the <see cref="P:Telerik.Windows.Controls.Windows8TouchPalette.FontFamily"/> used in important texts.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Windows8TouchPalette.DisabledOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.Windows8TouchPalette.DisabledOpacity"/> used in disabled states.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.Windows8TouchResourceExtension">
@@ -28923,6 +29924,11 @@
             The key for the <see cref="T:Telerik.Windows.Controls.Windows8TouchPalette"/>'s FontFamilyStrong.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Windows8TouchResourceKeyID.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Windows8TouchPalette"/>'s DisabledOpacity.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.Windows8TouchResourceKey">
             <summary>
             Keys for the <see cref="T:Telerik.Windows.Controls.Windows8TouchPalette"/> resources.
@@ -29046,6 +30052,11 @@
         <member name="F:Telerik.Windows.Controls.Windows8TouchResourceKey.FontFamilyStrong">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.Windows8TouchPalette"/>'s FontFamilyStrong.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Windows8TouchResourceKey.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Windows8TouchPalette"/>'s DisabledOpacity.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.Windows8TouchResourceKey.ToString">
@@ -29278,6 +30289,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.Windows8Palette.FontFamilyStrong"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Windows8Palette.DisabledOpacityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.Windows8Palette.DisabledOpacity"/> dependency property.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Windows8Palette.Palette">
             <summary>
             Holds the Palette singleton instance.
@@ -29361,6 +30377,11 @@
         <member name="P:Telerik.Windows.Controls.Windows8Palette.FontFamilyStrong">
             <summary>
             Gets or sets the <see cref="P:Telerik.Windows.Controls.Windows8Palette.FontFamily"/> used in important texts.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Windows8Palette.DisabledOpacity">
+            <summary>
+            Gets or sets the <see cref="P:Telerik.Windows.Controls.Windows8Palette.DisabledOpacity"/> used in disabled states.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Controls.Windows8ResourceExtension">
@@ -29473,6 +30494,11 @@
             The key for the <see cref="T:Telerik.Windows.Controls.Windows8Palette"/>'s FontFamilyStrong.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.Windows8ResourceKeyID.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Windows8Palette"/>'s DisabledOpacity.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.Windows8ResourceKey">
             <summary>
             Keys for the <see cref="T:Telerik.Windows.Controls.Windows8Palette"/> resources.
@@ -29571,6 +30597,11 @@
         <member name="F:Telerik.Windows.Controls.Windows8ResourceKey.FontFamilyStrong">
             <summary>
             The key for the <see cref="T:Telerik.Windows.Controls.Windows8Palette"/>'s FontFamilyStrong.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Windows8ResourceKey.DisabledOpacity">
+            <summary>
+            The key for the <see cref="T:Telerik.Windows.Controls.Windows8Palette"/>'s DisabledOpacity.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.Windows8ResourceKey.ToString">
@@ -32836,6 +33867,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.CloudUpload_Upload">
             <summary>
               Looks up a localized string similar to Upload.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.CloudUpload_UploadedFiles">
+            <summary>
+              Looks up a localized string similar to uploaded files.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.CloudUploadItem_Cancel">
@@ -40900,6 +41936,11 @@
               Looks up a localized string similar to Help.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.RibbonViewLayoutModeButtonContent">
+            <summary>
+              Looks up a localized string similar to Simplified Ribbon.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.RibbonViewMinimizeRibbon">
             <summary>
               Looks up a localized string similar to Minimize the Ribbon.
@@ -47073,6 +48114,11 @@
               Looks up a localized string similar to Shift cells right.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_100StackedLineWithMarkers_SubType">
+            <summary>
+              Looks up a localized string similar to 100% Stacked Line with Markers.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_Area_SubType">
             <summary>
               Looks up a localized string similar to Area.
@@ -47086,6 +48132,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_Bar_Type">
             <summary>
               Looks up a localized string similar to Bar.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_Bubble">
+            <summary>
+              Looks up a localized string similar to Bubble.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_CategoryChart">
@@ -47138,6 +48189,11 @@
               Looks up a localized string similar to Line.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_LineWithMarkers_SubType">
+            <summary>
+              Looks up a localized string similar to Line with Markers.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_Pie_SubType">
             <summary>
               Looks up a localized string similar to Pie.
@@ -47156,6 +48212,41 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_PieSeries">
             <summary>
               Looks up a localized string similar to Pie Series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_Scatter_SubType">
+            <summary>
+              Looks up a localized string similar to Scatter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterBarType">
+            <summary>
+              Looks up a localized string similar to X Y (Scatter).
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterChart">
+            <summary>
+              Looks up a localized string similar to Scatter Chart.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterSmooth_SubType">
+            <summary>
+              Looks up a localized string similar to Scatter with Smooth Lines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterSmoothMarker_SubType">
+            <summary>
+              Looks up a localized string similar to Scatter with Smooth Lines and Markers.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterStraight_SubType">
+            <summary>
+              Looks up a localized string similar to Scatter with Straight Lines.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_ScatterStraightMarker_SubType">
+            <summary>
+              Looks up a localized string similar to Scatter with Straight Lines and Markers.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_SelectionNotEnough">
@@ -47206,6 +48297,11 @@
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_StackedLine_SubType">
             <summary>
               Looks up a localized string similar to Stacked Line.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_StackedLineWithMarkers_SubType">
+            <summary>
+              Looks up a localized string similar to Stacked Line with Markers.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Spreadsheet_InsertChartDialog_SubHeader">
@@ -49202,6 +50298,136 @@
         <member name="P:Telerik.Windows.Controls.Strings.VirtualGridFilterStartsWith">
             <summary>
               Looks up a localized string similar to Starts with.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_DiscardSnapshot">
+            <summary>
+              Looks up a localized string similar to Discard snapshot.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_SaveSnapshot">
+            <summary>
+              Looks up a localized string similar to Save snapshot.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Auto">
+            <summary>
+              Looks up a localized string similar to Auto.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_BacklightCompensation">
+            <summary>
+              Looks up a localized string similar to Backlight Comp.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Brightness">
+            <summary>
+              Looks up a localized string similar to Brightness.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_CameraControl">
+            <summary>
+              Looks up a localized string similar to Camera Control.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Contrast">
+            <summary>
+              Looks up a localized string similar to Contrast.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Default">
+            <summary>
+              Looks up a localized string similar to Default.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Exposure">
+            <summary>
+              Looks up a localized string similar to Exposure.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Focus">
+            <summary>
+              Looks up a localized string similar to Focus.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Gain">
+            <summary>
+              Looks up a localized string similar to Gain.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Gamma">
+            <summary>
+              Looks up a localized string similar to Gamma.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Hue">
+            <summary>
+              Looks up a localized string similar to Hue.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Iris">
+            <summary>
+              Looks up a localized string similar to Aperture.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Pan">
+            <summary>
+              Looks up a localized string similar to Pan.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Roll">
+            <summary>
+              Looks up a localized string similar to Roll.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Saturation">
+            <summary>
+              Looks up a localized string similar to Saturation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Sharpness">
+            <summary>
+              Looks up a localized string similar to Sharpness.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Tilt">
+            <summary>
+              Looks up a localized string similar to Tilt.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_VideoProcAmp">
+            <summary>
+              Looks up a localized string similar to Video Processing Amplifier.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_WhiteBalance">
+            <summary>
+              Looks up a localized string similar to White Balance.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_Settings_Zoom">
+            <summary>
+              Looks up a localized string similar to Zoom.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_SettingsDialogTitle">
+            <summary>
+              Looks up a localized string similar to Settings.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_StartRecording">
+            <summary>
+              Looks up a localized string similar to Start recording.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_StopRecording">
+            <summary>
+              Looks up a localized string similar to Stop recording.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Strings.WebCam_TakeSnapshot">
+            <summary>
+              Looks up a localized string similar to Take Snapshot.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.Strings.Week">

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Telerik.Windows.Controls.FixedDocumentViewersUI;
 
 namespace Tools.View
 {
@@ -23,6 +24,9 @@ namespace Tools.View
         public PdfViewer()
         {
             InitializeComponent();
+            //RadPdfViewerAttachedComponents.SetRegisterSignSignatureDialog(pdfViewer,true);
+            //RadPdfViewerAttachedComponents.SetRegisterFindDialog(pdfViewer, true);
+            //RadPdfViewerAttachedComponents.SetRegisterSignaturePropertiesDialog(pdfViewer, true);
         }
     }
 }

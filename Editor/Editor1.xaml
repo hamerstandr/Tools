@@ -1,0 +1,116 @@
+﻿<UserControl x:Class="Editor.Editor1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Editor"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" ><!--xmlns:avalonEdit="clr-namespace:ICSharpCode.AvalonEdit.CodeCompletion;assembly=ICSharpCode.AvalonEdit"-->
+    <UserControl.CommandBindings>
+        <CommandBinding Command="{x:Static local:Editor1.MyCommand}" Executed="MyCommandExecuted"/>
+    </UserControl.CommandBindings>
+    <UserControl.Resources>
+        <!--<HierarchicalDataTemplate DataType="{x:Type local:DirectoryInfo}" ItemsSource="{Binding Children}">
+            <TextBlock Text="{Binding Name}"/>
+        </HierarchicalDataTemplate>-->
+        <DataTemplate x:Key="HeaderPane">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="*" Visibility="{Binding Change,Mode=TwoWay}" Foreground="Red"></TextBlock>
+                <telerik:Label Content="{Binding Header}"/>
+                <!-- NOTE : added the close button with a proper CommandParameter-->
+                <telerik:RadButton  x:Name="CloseButton" IsTabStop="False" Margin="5,.5" Height="23" Width="23"
+							 Command="{Binding CloseCommand}"
+							  InnerCornerRadius="0">
+                    <Path x:Name="ForegroundIcon" Data="M0,0L2,0 2,1 3,1 3,2 5,2 5,1 6,1 6,0 8,0 8,1 7,1 7,2 6,2 6,3 5,3 5,4 6,4 6,5 6,5 7,5 7,6 8,6 8,7 6,7 6,6 5,6 5,5 3,5 3,6 2,6 2,7 0,7 0,6 1,6 1,5 2,5 2,4 3,4 3,3 2,3 2,2 1,2 1,1 0,1z" Fill="Black" Height="7" Margin="0,1" Width="8"/>
+                    <!--<telerik:RadButton.Style>
+                        <Style TargetType="{x:Type telerik:RadButton}">
+                            <Setter Property="Width" Value="17"/>
+                            <Setter Property="Height" Value="17"/>
+                            <Setter Property="SnapsToDevicePixels" Value="True"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type telerik:RadButton}">
+                                        <Grid x:Name="LayoutRoot">
+                                            <telerikChromes:ButtonChrome RenderNormal="False" RenderMouseOver="{TemplateBinding IsMouseOver}" RenderPressed="{TemplateBinding IsPressed}">
+                                                <telerik:StyleManager.Theme>
+                                                    <telerik:FluentTheme/>
+                                                </telerik:StyleManager.Theme>
+                                            </telerikChromes:ButtonChrome>
+                                            <Path x:Name="BackgroundIcon" Data="M0,0L2,0 2,1 3,1 3,2 5,2 5,1 6,1 6,0 8,0 8,1 7,1 7,2 6,2 6,3 5,3 5,4 6,4 6,5 6,5 7,5 7,6 8,6 8,7 6,7 6,6 5,6 5,5 3,5 3,6 2,6 2,7 0,7 0,6 1,6 1,5 2,5 2,4 3,4 3,3 2,3 2,2 1,2 1,1 0,1z" Fill="White" Height="7" Margin="0,2,0,0" Width="8"/>
+                                            <Path x:Name="ForegroundIcon" Data="M0,0L2,0 2,1 3,1 3,2 5,2 5,1 6,1 6,0 8,0 8,1 7,1 7,2 6,2 6,3 5,3 5,4 6,4 6,5 6,5 7,5 7,6 8,6 8,7 6,7 6,6 5,6 5,5 3,5 3,6 2,6 2,7 0,7 0,6 1,6 1,5 2,5 2,4 3,4 3,3 2,3 2,2 1,2 1,1 0,1z" Fill="Black" Height="7" Margin="0,1" Width="8"/>
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Fill" TargetName="ForegroundIcon" Value="Black"/>
+                                                <Setter Property="Fill" TargetName="BackgroundIcon" Value="White"/>
+                                            </Trigger>
+                                            <Trigger Property="IsPressed" Value="True">
+                                                <Setter Property="Fill" TargetName="ForegroundIcon" Value="Black"/>
+                                                <Setter Property="Fill" TargetName="BackgroundIcon" Value="White"/>
+                                            </Trigger>
+                                            <Trigger Property="IsEnabled" Value="False">
+                                                <Setter Property="Fill" TargetName="ForegroundIcon" Value="#FF8D8D8D"/>
+                                                <Setter Property="Fill" TargetName="BackgroundIcon" Value="White"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </telerik:RadButton.Style>-->
+                </telerik:RadButton>
+            </StackPanel>
+
+        </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type local:FileInfo}">
+            <TextBlock Text="{Binding Name}"/>
+        </DataTemplate>-->
+        
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <telerik:RadDocking Grid.Row="0">
+            <telerik:RadSplitContainer InitialPosition="DockedLeft">
+                <telerik:RadPaneGroup  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" telerik:StyleManager.Theme="Fluent">
+                    <telerik:RadPane Header="Solution Explorer" CanUserClose="False" CanDockInDocumentHost="False" CanFloat="False">
+                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <telerik:RadButton Grid.Row="0" Margin="10" Height="35" Content="Open Folder" Click="RadButton_Click" telerik:StyleManager.Theme="Fluent"/>
+                            
+                            <telerik:RadTreeView x:Name="treeView" Grid.Row="1" 
+                                                 SelectionChanged="TreeView_SelectionChanged" 
+                                                 IsLoadOnDemandEnabled="True" 
+                                                 ItemPrepared="TreeView_ItemPrepared" 
+                                                 LoadOnDemand="TreeView_LoadOnDemand" telerik:StyleManager.Theme="Fluent"/>
+                            
+
+                        </Grid>
+                    </telerik:RadPane>
+                </telerik:RadPaneGroup>
+            </telerik:RadSplitContainer>
+            <telerik:RadDocking.DocumentHost>
+                <telerik:RadSplitContainer>
+                    <telerik:RadPaneGroup x:Name="PaneGroup1"  telerik:StyleManager.Theme="Fluent">
+                        <!--<telerik:RadDocumentPane x:Name="OpenDocument" Header="Open Document" CanUserClose="True" CanFloat="False">
+                            <Grid>
+                                <avalonEdit:TextEditor x:Name="syntaxEditor" />
+                                <TextBlock Text="Type not supported" Visibility="Collapsed" x:Name="notSupportedTxt" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" TextWrapping="Wrap" />
+                            </Grid>
+                        </telerik:RadDocumentPane>-->
+                    </telerik:RadPaneGroup>
+                </telerik:RadSplitContainer>
+            </telerik:RadDocking.DocumentHost>
+            
+        </telerik:RadDocking>
+        <StackPanel Grid.Row="1" Height="24" Orientation="Horizontal" Background="#ffca5100">
+            <telerik:RadProgressBar Name="ProgressBar1" Height="16" Width="100" Margin="10,0,10,0" />
+        </StackPanel>
+    </Grid>
+</UserControl>

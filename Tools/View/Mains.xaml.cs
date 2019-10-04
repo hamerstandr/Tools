@@ -86,5 +86,22 @@ namespace Tools.View
             win.Content = new Diagrams1();
             win.Show();
         }
+
+        //private void Button_Click_4(object sender, RoutedEventArgs e)
+        //{
+        //    var win = new RadWindow()
+        //    {
+        //        Header = "Editor",
+        //    };
+        //    win.Activated += Win_Activated;
+        //    win.Icon = new Image()
+        //    {
+        //        Source = ImageExampleHelper.LoadImage("Editor.ico")
+        //    };
+        //    //win.IconTemplate = this.Resources["PdfWindowIconTemplate"] as DataTemplate;
+        //    Taskbar.ShowInTaskbar(win, "Editor", "Editor.ico");//ImageExampleHelper.LoadImage("PDF.ico")
+        //    win.Content = new Editor.Editor1();
+        //    win.Show();
+        //}
     }
 }

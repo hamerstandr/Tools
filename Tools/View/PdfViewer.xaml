@@ -26,7 +26,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <!--<telerik:RadPdfViewerNavigationPane RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneTime}" />-->
+            <telerik:RadPdfViewerNavigationPane RadPdfViewer="{Binding ElementName=pdfViewer, Mode=OneTime}" />
             <telerik:RadPdfViewer Grid.Column="1" x:Name="pdfViewer" DataContext="{Binding CommandDescriptors, ElementName=pdfViewer}" 
                                 DocumentSource="/PdfViewer;component/SampleData/Sample.pdf" RenderOptions.BitmapScalingMode="HighQuality"
                                 telerik:RadPdfViewerAttachedComponents.RegisterSignSignatureDialog="True" 

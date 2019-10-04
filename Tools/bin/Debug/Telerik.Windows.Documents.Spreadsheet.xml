@@ -973,6 +973,11 @@
             should return false if it receives an event that it does not recognize or handle.
             </returns>
         </member>
+        <member name="M:Telerik.Windows.Documents.Spreadsheet.Expressions.CellReferenceRangeExpression.OnValueInvalidated">
+            <summary>
+            Called when the value is invalidated.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Documents.Spreadsheet.Expressions.CellReferenceRangeExpression.CellReferenceRange">
             <summary>
             Gets the cell reference range.
@@ -10302,6 +10307,11 @@
         <member name="F:Telerik.Windows.Documents.Spreadsheet.Expressions.NumberExpression.Zero">
             <summary>
             The Zero NumberExpression.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Spreadsheet.Expressions.NumberExpression.One">
+            <summary>
+            The One NumberExpression.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Documents.Spreadsheet.Expressions.NumberExpression.PI">

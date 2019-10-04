@@ -1331,13 +1331,13 @@
         <member name="M:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
             <inheritdoc />
         </member>
+        <member name="M:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.OnItemsSourceChanged(System.Collections.IEnumerable,System.Collections.IEnumerable)">
+            <inheritdoc />
+        </member>
         <member name="M:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.OnInitialized(System.EventArgs)">
             <inheritdoc/>
         </member>
         <member name="M:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.OnKeyDown(System.Windows.Input.KeyEventArgs)">
-            <inheritdoc/>
-        </member>
-        <member name="M:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.PrepareContainerForItemOverride(System.Windows.DependencyObject,System.Object)">
             <inheritdoc/>
         </member>
         <member name="P:Telerik.Windows.Controls.FileDialogs.FileBrowserListBox.FileBrowserDragDropBehavior">
@@ -2605,6 +2605,11 @@
         <member name="P:Telerik.Windows.Controls.FileDialogs.DirectoryBaseWrapper.IsExpanded">
             <summary>
             Gets or sets a value indicating whether the <see cref="T:Telerik.Windows.Controls.FileDialogs.DirectoryBaseWrapper"/> is expanded.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.FileDialogs.DirectoryBaseWrapper.CanExpand">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Telerik.Windows.Controls.FileDialogs.DirectoryBaseWrapper"/> can expand.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.FileDialogs.DirectoryBaseWrapper.IsInEditMode">

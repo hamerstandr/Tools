@@ -1,0 +1,1491 @@
+﻿<schedule:ObservableAppointmentCollection xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:schedule="clr-namespace:Telerik.Windows.Controls.ScheduleView;assembly=Telerik.Windows.Controls.ScheduleView"
+		            xmlns:scheduleView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.ScheduleView"
+		            xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+                    xmlns:common="clr-namespace:Calendar.Views.Schedule">
+    <!--MONDAY-->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/04/2010 6:00" End="11/04/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/04/2010 7:00" End="11/04/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/04/2010 07:45" End="11/04/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" ProgrammeLabel="sport" Programme="LiveCast News" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT" IsLive="True" Start="11/04/2010 08:30" End="11/04/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/04/2010 10:10" End="11/04/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" IsLive="True" Start="11/04/2010 12:00" End="11/04/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/04/2010 13:30" End="11/04/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/04/2010 14:15" End="11/04/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/04/2010 16:05" End="11/04/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/04/2010 16:50" End="11/04/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/04/2010 19:30" End="11/04/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/04/2010 6:00" End="11/04/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/04/2010 7:00" End="11/04/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/04/2010 08:00" End="11/04/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/04/2010 09:30" End="11/04/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF" IsLive="True" Start="11/04/2010 10:45" End="11/04/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/04/2010 12:00" End="11/04/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/04/2010 13:30" End="11/04/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/04/2010 14:20" End="11/04/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/04/2010 15:15" End="11/04/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/04/2010 16:15" End="11/04/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min"  ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/04/2010 17:00" End="11/04/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/04/2010 18:30" End="11/04/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/04/2010 6:00" End="11/04/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/04/2010 07:45" End="11/04/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/04/2010 08:30" End="11/04/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/04/2010 10:00" End="11/04/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/04/2010 11:00" End="11/04/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/04/2010 12:45" End="11/04/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/04/2010 14:00" End="11/04/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/04/2010 14:30" End="11/04/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/04/2010 15:45" End="11/04/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/04/2010 17:00" End="11/04/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/04/2010 18:30" End="11/04/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!-- TUESDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/05/2010 6:00" End="11/05/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/05/2010 7:00" End="11/05/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/05/2010 07:45" End="11/05/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/05/2010 08:30" End="11/05/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/05/2010 10:10" End="11/05/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/05/2010 12:00" End="11/05/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/05/2010 13:30" End="11/05/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/05/2010 14:15" End="11/05/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/05/2010 16:05" End="11/05/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/05/2010 16:50" End="11/05/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/05/2010 19:30" End="11/05/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/05/2010 6:00" End="11/05/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/05/2010 7:00" End="11/05/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/05/2010 08:00" End="11/05/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/05/2010 09:30" End="11/05/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/05/2010 10:45" End="11/05/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/05/2010 12:00" End="11/05/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/05/2010 13:30" End="11/05/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/05/2010 14:20" End="11/05/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/05/2010 15:15" End="11/05/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/05/2010 16:15" End="11/05/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/05/2010 17:00" End="11/05/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/05/2010 18:30" End="11/05/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/05/2010 6:00" End="11/05/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/05/2010 07:45" End="11/05/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/05/2010 08:30" End="11/05/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/05/2010 10:00" End="11/05/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/05/2010 11:00" End="11/05/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/05/2010 12:45" End="11/05/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/05/2010 14:00" End="11/05/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/05/2010 14:30" End="11/05/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/05/2010 15:45" End="11/05/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/05/2010 17:00" End="11/05/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/05/2010 18:30" End="11/05/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+
+    <!-- WEDNESDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/06/2010 6:00" End="11/06/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/06/2010 7:00" End="11/06/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/06/2010 07:45" End="11/06/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/06/2010 08:30" End="11/06/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/06/2010 10:10" End="11/06/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/06/2010 12:00" End="11/06/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/06/2010 13:30" End="11/06/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/06/2010 14:15" End="11/06/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/06/2010 16:05" End="11/06/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/06/2010 16:50" End="11/06/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/06/2010 19:30" End="11/06/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/06/2010 6:00" End="11/06/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/06/2010 7:00" End="11/06/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/06/2010 08:00" End="11/06/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/06/2010 09:30" End="11/06/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/06/2010 10:45" End="11/06/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/06/2010 12:00" End="11/06/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/06/2010 13:30" End="11/06/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/06/2010 14:20" End="11/06/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/06/2010 15:15" End="11/06/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/06/2010 16:15" End="11/06/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/06/2010 17:00" End="11/06/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/06/2010 18:30" End="11/06/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="150 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/06/2010 6:00" End="11/06/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/06/2010 07:45" End="11/06/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/06/2010 08:30" End="11/06/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/06/2010 10:00" End="11/06/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/06/2010 11:00" End="11/06/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/06/2010 12:45" End="11/06/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/06/2010 14:00" End="11/06/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/06/2010 14:30" End="11/06/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/06/2010 15:45" End="11/06/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/06/2010 17:00" End="11/06/2010 18:30" Body="KIDS Body." Programme="Sportix" LabelBrush="#FFD6C400" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/06/2010 18:30" End="11/06/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!-- THURSDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/07/2010 6:00" End="11/07/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/07/2010 7:00" End="11/07/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/07/2010 07:45" End="11/07/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/07/2010 08:30" End="11/07/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/07/2010 10:10" End="11/07/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/07/2010 12:00" End="11/07/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/07/2010 13:30" End="11/07/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/07/2010 14:15" End="11/07/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/07/2010 16:05" End="11/07/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/07/2010 16:50" End="11/07/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/07/2010 19:30" End="11/07/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/07/2010 6:00" End="11/07/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/07/2010 7:00" End="11/07/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/07/2010 08:00" End="11/07/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/07/2010 09:30" End="11/07/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/07/2010 10:45" End="11/07/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/07/2010 12:00" End="11/07/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/07/2010 13:30" End="11/07/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/07/2010 14:20" End="11/07/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/07/2010 15:15" End="11/07/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/07/2010 16:15" End="11/07/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/07/2010 17:00" End="11/07/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/07/2010 18:30" End="11/07/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="150 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/07/2010 6:00" End="11/07/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/07/2010 07:45" End="11/07/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/07/2010 08:30" End="11/07/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/07/2010 10:00" End="11/07/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/07/2010 11:00" End="11/07/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/07/2010 12:45" End="11/07/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/07/2010 14:00" End="11/07/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/07/2010 14:30" End="11/07/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/07/2010 15:45" End="11/07/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/07/2010 17:00" End="11/07/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/07/2010 18:30" End="11/07/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!-- FRIDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/08/2010 6:00" End="11/08/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/08/2010 7:00" End="11/08/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/08/2010 07:45" End="11/08/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/08/2010 08:30" End="11/08/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/08/2010 10:10" End="11/08/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/08/2010 12:00" End="11/08/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/08/2010 13:30" End="11/08/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/08/2010 14:15" End="11/08/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/08/2010 16:05" End="11/08/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/08/2010 16:50" End="11/08/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/08/2010 19:30" End="11/08/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/08/2010 6:00" End="11/08/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/08/2010 7:00" End="11/08/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/08/2010 08:00" End="11/08/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/08/2010 09:30" End="11/08/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/08/2010 10:45" End="11/08/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/08/2010 12:00" End="11/08/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/08/2010 13:30" End="11/08/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/08/2010 14:20" End="11/08/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/08/2010 15:15" End="11/08/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/08/2010 16:15" End="11/08/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/08/2010 17:00" End="11/08/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/08/2010 18:30" End="11/08/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="150 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/08/2010 6:00" End="11/08/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/08/2010 07:45" End="11/08/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/08/2010 08:30" End="11/08/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/08/2010 10:00" End="11/08/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/08/2010 11:00" End="11/08/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/08/2010 12:45" End="11/08/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/08/2010 14:00" End="11/08/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/08/2010 14:30" End="11/08/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/08/2010 15:45" End="11/08/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/08/2010 17:00" End="11/08/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/08/2010 18:30" End="11/08/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!-- SATURDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/09/2010 6:00" End="11/09/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/09/2010 7:00" End="11/09/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/09/2010 07:45" End="11/09/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/09/2010 08:30" End="11/09/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/09/2010 10:10" End="11/09/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/09/2010 12:00" End="11/09/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/09/2010 13:30" End="11/09/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/09/2010 14:15" End="11/09/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/09/2010 16:05" End="11/09/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/09/2010 16:50" End="11/09/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/09/2010 19:30" End="11/09/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/09/2010 6:00" End="11/09/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/09/2010 7:00" End="11/09/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/09/2010 08:00" End="11/09/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/09/2010 09:30" End="11/09/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/09/2010 10:45" End="11/09/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/09/2010 12:00" End="11/09/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/09/2010 13:30" End="11/09/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/09/2010 14:20" End="11/09/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/09/2010 15:15" End="11/09/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/09/2010 16:15" End="11/09/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/09/2010 17:00" End="11/09/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/09/2010 18:30" End="11/09/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/09/2010 6:00" End="11/09/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/09/2010 07:45" End="11/09/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/09/2010 08:30" End="11/09/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/09/2010 10:00" End="11/09/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/09/2010 11:00" End="11/09/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/09/2010 12:45" End="11/09/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/09/2010 14:00" End="11/09/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/09/2010 14:30" End="11/09/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/09/2010 15:45" End="11/09/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/09/2010 17:00" End="11/09/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/09/2010 18:30" End="11/09/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!-- SUNDAY -->
+    <!-- NEWS TV-->
+    <common:ProgrammeAppointment Subject="WORLD NEWS"  IsLive="True" Start="11/10/2010 6:00" End="11/10/2010 7:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/10/2010 7:00" End="11/10/2010 7:45" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/10/2010 07:45" End="11/10/2010 08:30" Body="Sports" LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/10/2010 08:30" End="11/10/2010 10:10" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/10/2010 10:10" End="11/10/2010 12:00" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="WOLRD NEWS" Start="11/10/2010 12:00" End="11/10/2010 13:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/10/2010 13:30" End="11/10/2010 14:15" Body="Sports Body." LabelBrush="#FFD6C400" Programme="LiveCast News" ProgrammeLabel="sport" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/10/2010 14:15" End="11/10/2010 16:05" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TODAY HIGHLIGHTS" Start="11/10/2010 16:05" End="11/10/2010 16:50" Body="Sports Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="REPORTER NEWS" Start="11/10/2010 16:50" End="11/10/2010 19:30" Body="News Body." LabelBrush="#FFB11E54" Programme="LiveCast News" ProgrammeLabel="news" Duration="110 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ON THE SPOT"  IsLive="True" Start="11/10/2010 19:30" End="11/10/2010 21:00" Body="Show" LabelBrush="#FF8A72AF" Programme="LiveCast News" ProgrammeLabel="show" Duration="100 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="LiveCastNews" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--ENTERTAINMENT TV-->
+    <common:ProgrammeAppointment Subject="SCOOBY-DOO" Start="11/10/2010 6:00" End="11/10/2010 7:00" Body="News Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/10/2010 7:00" End="11/10/2010 8:00" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="THE SOCIAL NETWORK" Start="11/10/2010 08:00" End="11/10/2010 09:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PERFECT MATCH" Start="11/10/2010 09:30" End="11/10/2010 10:45" Body="KIDS Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="TRUE BFF"  IsLive="True" Start="11/10/2010 10:45" End="11/10/2010 12:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="PATHS OF GLORY" Start="11/10/2010 12:00" End="11/10/2010 13:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="STAR WARS: THE CLONE WARS" Start="11/10/2010 13:30" End="11/10/2010 14:20" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="50 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="I LOVE L.A." Start="11/10/2010 14:20" End="11/10/2010 15:15" Body="Shows Body." LabelBrush="#FF8A72AF" Programme="Voozy" ProgrammeLabel="show" Duration="55 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="2 STUPID DOGS" Start="11/10/2010 15:15" End="11/10/2010 16:15" Body="Sports Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="BEN 10" Start="11/10/2010 16:15" End="11/10/2010 17:00" Body="Ben 10 Body." LabelBrush="#FF255C00" Programme="Voozy" ProgrammeLabel="kids" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/kids.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Kids" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="RATATOUILLE" Start="11/10/2010 17:00" End="11/10/2010 18:30" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="AVATAR" Start="11/10/2010 18:30" End="11/10/2010 21:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Voozy" ProgrammeLabel="movie" Duration="150 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Voozy" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+
+    <!--CSB-->
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: FINLAND-RUSSIA" IsLive="True"  Start="11/10/2010 6:00" End="11/10/2010 7:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/10/2010 07:45" End="11/10/2010 08:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-BRAZIL" IsLive="True" Start="11/10/2010 08:30" End="11/10/2010 10:00" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ULTIMATE RACE" Start="11/10/2010 10:00" End="11/10/2010 11:00" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="60 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="ICE HOCKEY: RUSSIA-CANADA" IsLive="True" Start="11/10/2010 11:00" End="11/10/2010 12:45" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="105 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="VOLLEYBALL: POLAND-LITVA" IsLive="True" Start="11/10/2010 12:45" End="11/10/2010 14:00" Body="Sports Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/10/2010 14:00" End="11/10/2010 14:30" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="30 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FORMULA 1" IsLive="True" Start="11/10/2010 14:30" End="11/10/2010 15:45" Body="SHOW Body." LabelBrush="#FF8A72AF" Programme="Sportix" ProgrammeLabel="show" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/shows.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Shows" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="CARS" Start="11/10/2010 15:45" End="11/10/2010 17:00" Body="Movies Body." LabelBrush="#FF328493" Programme="Sportix" ProgrammeLabel="movie" Duration="75 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/movies.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Movies" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="FOOTBALL: GERMANY-ARGENTINA" IsLive="True" Start="11/10/2010 17:00" End="11/10/2010 18:30" Body="KIDS Body." LabelBrush="#FFD6C400" Programme="Sportix" ProgrammeLabel="sport" Duration="90 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/sports.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="Sports" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+    <common:ProgrammeAppointment Subject="SPORTS NEWS" Start="11/10/2010 18:30" End="11/10/2010 19:15" Body="Movies Body." LabelBrush="#FFB11E54" Programme="Sportix" ProgrammeLabel="news" Duration="45 min" ProgrammeImageSource="../../Images/ScheduleView/CustomAppointment/news.png">
+        <schedule:Appointment.Resources>
+            <scheduleView:Resource ResourceName="Sportix" ResourceType="TV" />
+            <scheduleView:Resource ResourceName="News" ResourceType="Programme" />
+        </schedule:Appointment.Resources>
+    </common:ProgrammeAppointment>
+</schedule:ObservableAppointmentCollection>

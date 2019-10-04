@@ -162,6 +162,16 @@
             Represents OpenXml import settings.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Documents.FormatProviders.OpenXml.Model.Elements.OpenXmlElementBase.UniquePoolId">
+            <summary>
+            There is property with the same name in OpenXmlChildElement of T class. This property is introduced to fix a bug caused by the other property.
+            When creating a new element the UniquePoolId is used which causes a check if there are elements with the same name in the object pool.
+            When the element is released and is returned to the pool the ElementName propery is used. This way the create method never finds the already
+            created objects and the pool for the ElementName objects becomes larger and larger and the objects are never leaving it. In order to remove this
+            hack all UniquePoolId properties must be removed and the ElementsFactory should be refactored so instead of matcihng the element factory method not only by name, 
+            to match them by name and namespace. Refactoring of the ElementsFactory might not be enough for removing the need for UniuqePoolId property.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.AxisGroupName">
             <summary>
             Represents the possible groups of axes a group of series can be associated with.
@@ -396,12 +406,6 @@
             Represents a categorical axis. The categorical axis is designed to contain discrete values.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.CategoryAxis.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.CategoryAxis.AxisType">
             <summary>
             Gets the type of the axis.
@@ -411,12 +415,6 @@
             <summary>
             Represents a date axis. The date axis is designed to contain date values. 
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.DateAxis.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.DateAxis.AxisType">
             <summary>
@@ -437,12 +435,6 @@
             <summary>
             Represents a value axis. The value axis is designed to contain numeric values. 
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.ValueAxis.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ValueAxis.AxisType">
             <summary>
@@ -503,6 +495,16 @@
         <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ChartType.Doughnut">
             <summary>
             Denotes the doughnut type of chart.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ChartType.Scatter">
+            <summary>
+            Denotes the scatter type of chart.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ChartType.Bubble">
+            <summary>
+            Denotes the bubble type of chart.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.DocumentChart">
@@ -571,14 +573,84 @@
             Denotes the top-side positioning of the legend.
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle">
+            <summary>
+            Represents the possible marker styles.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Auto">
+            <summary>
+            Represents the automatic marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Circle">
+            <summary>
+            Represents the circle marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Dash">
+            <summary>
+            Represents the dash marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Diamond">
+            <summary>
+            Represents the diamond marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Dot">
+            <summary>
+            Represents the dot marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.None">
+            <summary>
+            Represents no marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Plus">
+            <summary>
+            Represents the plus marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Square">
+            <summary>
+            Represents the square marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Star">
+            <summary>
+            Represents the star marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.Triangle">
+            <summary>
+            Represents the triangle marker.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.MarkerStyle.X">
+            <summary>
+            Represents the x marker.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeries">
             <summary>
             Represents a series of type area.
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.CategorySeriesBase">
+            <summary>
+            Represents a base class for the category series.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase">
             <summary>
             Represents a base class for the series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase"/> class.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.Clone">
@@ -592,26 +664,25 @@
             Gets the type of the series.
             </summary>
         </member>
-        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.Values">
-            <summary>
-            Gets or sets the data for the values of the series.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.Categories">
-            <summary>
-            Gets or sets the data for the categories of the series.
-            </summary>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.Title">
             <summary>
             Gets or sets the title of the series.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeries.Clone">
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesBase.Outline">
             <summary>
-            Creates a deep copy of the object.
+            Gets the series outline.
             </summary>
-            <returns>The deep copy of the object.</returns>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.CategorySeriesBase.Values">
+            <summary>
+            Gets or sets the data for the values of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.CategorySeriesBase.Categories">
+            <summary>
+            Gets or sets the data for the categories of the series.
+            </summary>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeries.SeriesType">
             <summary>
@@ -675,12 +746,6 @@
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeriesGroup"/> class.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeriesGroup.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.AreaSeriesGroup.SeriesType">
             <summary>
             Gets the type of series this group holds.
@@ -716,12 +781,6 @@
             Represents a series of type bar.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeries.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeries.SeriesType">
             <summary>
             Gets the type of the series.
@@ -736,12 +795,6 @@
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeriesGroup"/> class.
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeriesGroup.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeriesGroup.SeriesType">
             <summary>
@@ -761,6 +814,56 @@
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BarSeriesGroup.BarDirection">
             <summary>
             Gets or sets the direction of the bars.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeries">
+            <summary>
+            Represents a series of type bubble.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.PointSeriesBase">
+            <summary>
+            Represents a base class for the point series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.PointSeriesBase.XValues">
+            <summary>
+            Gets or sets the data for the X values of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.PointSeriesBase.YValues">
+            <summary>
+            Gets or sets the data for the Y values of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeries.SeriesType">
+            <summary>
+            Gets the type of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeries.BubbleSizes">
+            <summary>
+            Gets or sets the data for the bubble size of the series.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeriesGroup">
+            <summary>
+            Represents a group of series of type bubble.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeriesGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeriesGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeriesGroup.SeriesType">
+            <summary>
+            Gets the type of series this group holds.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.BubbleSeriesGroup.AxisGroupName">
+            <summary>
+            Gets or sets the value indicating which group of axes the series group is associated with.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.ChartDataType">
@@ -797,12 +900,6 @@
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.PieSeriesGroup"/> class.
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.PieSeriesGroup.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.PieSeriesGroup.SeriesType">
             <summary>
@@ -862,6 +959,86 @@
             Gets the formula which refers to the chart data.
             </summary>
         </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeries">
+            <summary>
+            Represents a series of type scatter.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeries.SeriesType">
+            <summary>
+            Gets the type of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeries.ScatterStyle">
+            <summary>
+            Gets the style of the scatter series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeries.IsSmooth">
+            <summary>
+            Gets or sets a value indicating if the series line will be smooth.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeries.Marker">
+            <summary>
+            Gets or sets the series marker.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeriesGroup">
+            <summary>
+            Represents a group of series of type scatter.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeriesGroup.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeriesGroup"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeriesGroup.SeriesType">
+            <summary>
+            Gets the type of series this group holds.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterSeriesGroup.AxisGroupName">
+            <summary>
+            Gets or sets the value indicating which group of axes the series group is associated with.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle">
+            <summary>
+            Represents the possible types of scatter styles.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.None">
+            <summary>
+            Specifies the points on the scatter chart shall not be connected with straight lines and markers shall not be drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.Line">
+            <summary>
+            Specifies the points on the scatter chart shall be connected with straight lines but markers shall not be drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.LineMarker">
+            <summary>
+            Specifies the points on the scatter chart shall be connected with straight lines and markers shall be drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.Marker">
+            <summary>
+            Specifies the points on the scatter chart shall not be connected with lines and markers shall be drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.Smooth">
+            <summary>
+            Specifies the the points on the scatter chart shall be connected with smoothed lines and markers shall not be drawn.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.ScatterStyle.SmoothMarker">
+            <summary>
+            Specifies the the points on the scatter chart shall be connected with smoothed lines and markers shall be drawn.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesGrouping">
             <summary>
             Denotes the possible types of grouping for a group of series.
@@ -887,15 +1064,19 @@
             Represents a series of type line.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeries.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeries.SeriesType">
             <summary>
             Gets the type of the series.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeries.IsSmooth">
+            <summary>
+            Gets or sets a value indicating if the series line will be smooth.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeries.Marker">
+            <summary>
+            Gets or sets the series marker.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeriesGroup">
@@ -907,12 +1088,6 @@
             <summary>
             Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeriesGroup"/> class.
             </summary>
-        </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeriesGroup.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
         </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.LineSeriesGroup.SeriesType">
             <summary>
@@ -960,12 +1135,6 @@
             Represents a series of type pie.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.PieSeries.Clone">
-            <summary>
-            Creates a deep copy of the object.
-            </summary>
-            <returns>The deep copy of the object.</returns>
-        </member>
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.PieSeries.SeriesType">
             <summary>
             Gets the type of the series.
@@ -988,9 +1157,28 @@
             </summary>
             <returns>The new series object.</returns>
         </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection.AddBubble(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
+            <summary>
+            Creates a new series with data siutable for bubble series, adds it to the collection and returns it.
+            </summary>
+            <param name="xValuesData">The data for the X values of the series.</param>
+            <param name="yValuesData">The data for the Y values of the series.</param>
+            <param name="bubbleSizesData">The data for the bubble size values of the series.</param>
+            <param name="title">The title of the series.</param>
+            <returns>The new series object.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection.AddScatter(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
+            <summary>
+            Creates a new series with data siutable for scatter series, adds it to the collection and returns it.
+            </summary>
+            <param name="xValuesData">The data for the X values of the series.</param>
+            <param name="yValuesData">The data for the Y values of the series.</param>
+            <param name="title">The title of the series.</param>
+            <returns>The new series object.</returns>
+        </member>
         <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection.Add(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
             <summary>
-            Creates a new series, adds it to the collection and returns it.
+            Creates a new series using the specified data, adds it to the collection and returns it.
             </summary>
             <param name="categoriesData">The data for the categories of the series.</param>
             <param name="valuesData">The data for the values of the series.</param>
@@ -1024,6 +1212,25 @@
             <summary>
             Creates a new series, adds it to the collection and returns it.
             </summary>
+            <returns>The new series object.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection`1.AddBubble(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
+            <summary>
+            Creates a new series with data siutable for bubble series, adds it to the collection and returns it.
+            </summary>
+            <param name="xValuesData">The data for the X values of the series.</param>
+            <param name="yValuesData">The data for the Y values of the series.</param>
+            <param name="bubbleSizesData">The data for the bubble size values of the series.</param>
+            <param name="title">The title of the series.</param>
+            <returns>The new series object.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection`1.AddScatter(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
+            <summary>
+            Creates a new series with data siutable for scatter series, adds it to the collection and returns it.
+            </summary>
+            <param name="xValuesData">The data for the X values of the series.</param>
+            <param name="yValuesData">The data for the Y values of the series.</param>
+            <param name="title">The title of the series.</param>
             <returns>The new series object.</returns>
         </member>
         <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesCollection`1.Add(Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.IChartData,Telerik.Windows.Documents.Model.Drawing.Charts.Title)">
@@ -1097,6 +1304,16 @@
         <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesType.Area">
             <summary>
             Represents the area series type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesType.Scatter">
+            <summary>
+            Represents the scatter series type.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Documents.Model.Drawing.Charts.SeriesType.Bubble">
+            <summary>
+            Represents the bubble series type.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.StringChartData">
@@ -1222,6 +1439,42 @@
         <member name="P:Telerik.Windows.Documents.Model.Drawing.Shapes.ChartLine.Outline">
             <summary>
             Gets the outline properties of the line.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Documents.Model.Drawing.Charts.Marker">
+            <summary>
+            Represents a marker for the chart series.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Documents.Model.Drawing.Charts.Marker"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.Clone">
+            <summary>
+            Creates a deep copy of the object.
+            </summary>
+            <returns>The deep copy of the object.</returns>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.Symbol">
+            <summary>
+            Gets or sets the marker symbol.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.Size">
+            <summary>
+            Gets or sets the marker size. The alowed values are between 2 and 72.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.Fill">
+            <summary>
+            Gets or sets the marker fill.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Documents.Model.Drawing.Charts.Marker.Outline">
+            <summary>
+            Gets the marker outline.
             </summary>
         </member>
         <member name="T:Telerik.Windows.Documents.Model.Drawing.Theming.NoFill">
@@ -2129,6 +2382,20 @@
             
              @return the algorithm name
         </member>
+        <member name="T:Telerik.Windows.Documents.Common.Model.Protection.HashingAlgorithmsProvider">
+            <summary>
+            Represents a hash algorithms provider.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Common.Model.Protection.HashingAlgorithmsProvider.EnforceFips1402">
+            <summary>
+            Enforces Federal Information Processing Standard (FIPS) Publication 140-2.
+            </summary>
+            <remarks>
+            Calling this method will cause some hashing algorithms to be excluded from the supported set of algorithms.
+            This method must be call before using any hashing algorithms.
+            </remarks>
+        </member>
         <member name="M:Telerik.Windows.Documents.Common.Model.Protection.HexEncoder.Encode(System.Byte[],System.Int32,System.Int32,System.IO.Stream)">
              encode the input data producing a Hex output stream.
             
@@ -2145,6 +2412,18 @@
              whitespace characters will be ignored.
             
              @return the number of bytes produced.
+        </member>
+        <member name="T:Telerik.Windows.Documents.Common.Model.Protection.IProtectionAlgorithm">
+            <summary>
+            Defines the members of protection algorithm.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Documents.Common.Model.Protection.IProtectionAlgorithm.ComputeHash(System.Byte[])">
+            <summary>
+            Computes the hash value for the specified byte array.
+            </summary>
+            <param name="buffer">The input to compute the hash code for.</param>
+            <returns>The computed hash code.</returns>
         </member>
         <member name="M:Telerik.Windows.Documents.Common.Model.Protection.LongDigest.#ctor">
             Constructor for variable length word

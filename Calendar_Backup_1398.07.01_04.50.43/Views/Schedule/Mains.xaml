@@ -1,0 +1,306 @@
+﻿<UserControl x:Class="Calendar.Views.Schedule.Mains"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Calendar.Views.Schedule"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:scheduleView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.ScheduleView"
+             xmlns:dragDrop="clr-namespace:Telerik.Windows.DragDrop;assembly=Telerik.Windows.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <local:ViewModel x:Key="ViewModel"
+				AppointmentsSource="/Calendar;component/Views/Schedule/Appointments.xaml" />
+
+        <telerik:Windows8Theme x:Key="Theme" />
+
+        <LinearGradientBrush x:Key="ShadowBrush" EndPoint="-1.49,0.504" StartPoint="2.436,0.504">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="#7FFFFFFF" Offset="0.549"/>
+            <GradientStop Color="Transparent" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="NewsHorizontalStyle" TargetType="telerik:AppointmentItem">
+            <Setter Property="Background" Value="#FF6EB97D" />
+        </Style>
+        <Style x:Key="SportsHorizontalStyle" TargetType="telerik:AppointmentItem">
+            <Setter Property="Background" Value="#FFB0D04C" />
+        </Style>
+        <Style x:Key="KidsHorizontalStyle" TargetType="telerik:AppointmentItem">
+            <Setter Property="Background" Value="#FF5BC4C3" />
+        </Style>
+        <Style x:Key="MoviesHorizontalStyle" TargetType="telerik:AppointmentItem">
+            <Setter Property="Background" Value="#FF66BCE5" />
+        </Style>
+        <Style x:Key="ShowsHorizontalStyle" TargetType="telerik:AppointmentItem">
+            <Setter Property="Background" Value="#FFA485BD" />
+        </Style>
+
+
+        <Style TargetType="telerik:RadRibbonButton" BasedOn="{StaticResource RadRibbonButtonStyle}">
+            <Setter Property="Padding" Value="3 0" />
+        </Style>
+
+        <Style x:Key="ClearButtonStyle" TargetType="telerik:RadButton">
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="2 0" />
+            <Setter Property="MinWidth" Value="16" />
+            <Setter Property="MinHeight" Value="16" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="telerik:RadButton">
+                        <Grid>
+                            <Rectangle x:Name="backgroundRect"  Fill="Transparent" />
+                            <ContentPresenter Content="{TemplateBinding Content}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Fill" TargetName="backgroundRect"  Value="#19767676" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="YellowCategoryBrush" Color="#FFF0C600" />
+        <SolidColorBrush x:Key="GreenCategoryBrush" Color="#FFA3C734" />
+        <SolidColorBrush x:Key="PurpleCategoryBrush" Color="#FF9774B4" />
+        <SolidColorBrush x:Key="PinkCategoryBrush" Color="#FFD6798D" />
+        <SolidColorBrush x:Key="FreeMarkerBrush" Color="#FF309B46" />
+        <SolidColorBrush x:Key="BusyMarkerBrush" Color="#FFE61E26" />
+        <SolidColorBrush x:Key="TentativeMarkerBrush" Color="#FF41229B" />
+        <SolidColorBrush x:Key="OutOfOfficeMarkerBrush" Color="#FFF1C700" />
+
+        <DataTemplate x:Key="CategoryHeaderTemplate">
+            <TextBlock Text="{Binding DisplayName}" />
+        </DataTemplate>
+
+        <DataTemplate x:Key="TimeMarkerHeaderTemplate">
+            <TextBlock Text="{Binding TimeMarkerName}" />
+        </DataTemplate>
+
+    </UserControl.Resources>
+
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="6" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Background="{StaticResource ShadowBrush}" />
+
+        <!--RadCalendar-->
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" VerticalAlignment="Top" Margin="0 5 0 0">
+            <telerik:RadCalendar x:Name="calendar" SelectedDate="{Binding CurrentDate, ElementName=scheduleview, Mode=TwoWay}" SelectionMode="Single" 
+                                 DisplayDate="{Binding DisplayDate, Mode=TwoWay}" DisplayMode="{Binding DisplayMode, Mode=TwoWay}"
+                                 VerticalAlignment="Top" MaxHeight="290" MaxWidth="300"/>
+
+            <StackPanel Margin="17 8 17 0">
+                <CheckBox Content="LiveCastNews" Margin="0 5" IsChecked="{Binding ShowNewsChannel, Mode=TwoWay}" />
+                <CheckBox Content="Voozy" Margin="0 5" IsChecked="{Binding ShowEntertainmentChannel, Mode=TwoWay}" Grid.Column="1"/>
+                <CheckBox Content="Sportix" Margin="0 5" IsChecked="{Binding ShowSportsChannel, Mode=TwoWay}"  Grid.Row="1" />
+            </StackPanel>
+        </StackPanel>
+
+        <telerik:RadScheduleView x:Name="scheduleview" Grid.Row="2" Grid.Column="2" Margin="0" 
+                                 AppointmentsSource="{Binding Appointments}" 
+                             SelectedAppointment="{Binding SelectedAppointment, Mode=TwoWay}"
+								 ActiveViewDefinitionIndex="{Binding ActiveViewDefinitionIndex,Mode=TwoWay}"
+								 GroupDescriptionsSource="{Binding GroupDescriptions}"
+                                 NavigationHeaderVisibility="Collapsed"  CurrentDate="{Binding CurrentDate,Mode=TwoWay}" 
+								 BorderThickness="0 1 1 1"
+								 FirstVisibleTime="06:00">
+            <telerik:RadScheduleView.ResourceTypesSource>
+                <scheduleView:ResourceTypeCollection>
+                    <scheduleView:ResourceType Name="TV">
+                        <scheduleView:Resource ResourceName="LiveCastNews" DisplayName="LiveCast News"  />
+                        <scheduleView:Resource ResourceName="Voozy" DisplayName="Voozy TV"  />
+                        <scheduleView:Resource ResourceName="Sportix" DisplayName="Sportix TV"  />
+                    </scheduleView:ResourceType>
+                    <scheduleView:ResourceType Name="Programme">
+                        <scheduleView:Resource ResourceName="News" DisplayName="News"  />
+                        <scheduleView:Resource ResourceName="Sports" DisplayName="Sports"  />
+                        <scheduleView:Resource ResourceName="Kids" DisplayName="Kids"  />
+                        <scheduleView:Resource ResourceName="Movies" DisplayName="Movies" />
+                        <scheduleView:Resource ResourceName="Shows" DisplayName="Shows" />
+                    </scheduleView:ResourceType>
+                </scheduleView:ResourceTypeCollection>
+            </telerik:RadScheduleView.ResourceTypesSource>
+
+            <telerik:RadScheduleView.ViewDefinitions>
+                <telerik:DayViewDefinition GroupFilter="{Binding GroupFilter}" Title="Day View" />
+                <telerik:WeekViewDefinition GroupFilter="{Binding GroupFilter}" Title="Week View" FirstDayOfWeek="Monday" />
+                <local:WorkWeekViewDefinition GroupFilter="{Binding GroupFilter}" Title="Work Week View" FirstDayOfWeek="Monday" />
+                <telerik:MonthViewDefinition GroupFilter="{Binding GroupFilter}" Title="Month View" />
+                <telerik:TimelineViewDefinition GroupFilter="{Binding GroupFilter}" Title="Timeline View" />
+            </telerik:RadScheduleView.ViewDefinitions>
+
+            <telerik:RadScheduleView.CategoriesSource>
+                <scheduleView:CategoryCollection>
+                    <scheduleView:Category CategoryName="Yellow" CategoryBrush="{StaticResource YellowCategoryBrush}" />
+                    <scheduleView:Category CategoryName="Green" CategoryBrush="{StaticResource GreenCategoryBrush}" />
+                    <scheduleView:Category CategoryName="Purple" CategoryBrush="{StaticResource PurpleCategoryBrush}" />
+                    <scheduleView:Category CategoryName="Pink" CategoryBrush="{StaticResource PinkCategoryBrush}" />
+                </scheduleView:CategoryCollection>
+            </telerik:RadScheduleView.CategoriesSource>
+
+
+        </telerik:RadScheduleView>
+
+        <Grid Grid.Row="1" Grid.Column="2" Height="30" Background="#FFFFFFFF">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock x:Name="currentViewDefinitionText"  Text="{Binding ActiveViewDefinition.Title, ElementName=scheduleview}" VerticalAlignment="Center" Margin="53 0 10 0" FontSize="14" Foreground="#FF767676" />
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 10 0">
+                <TextBlock x:Name="currentDateText" Text="{Binding CurrentVisibleRangeText, ElementName=scheduleview}" VerticalAlignment="Center" Margin="10 0" Foreground="#FF767676" />
+                <telerik:RadButton Command="scheduleView:RadScheduleViewCommands.DecreaseVisibleDateLarge" CommandTarget="{Binding ElementName=scheduleview}" Style="{StaticResource ClearButtonStyle}" VerticalAlignment="Center">
+                    <Path Data="M0,4.5 L6,0 L6,9z" Width="6" Height="9" Fill="#FF767676" />
+                </telerik:RadButton>
+                <telerik:RadButton Command="scheduleView:RadScheduleViewCommands.IncreaseVisibleDateLarge" CommandTarget="{Binding ElementName=scheduleview}" Style="{StaticResource ClearButtonStyle}" VerticalAlignment="Center">
+                    <Path Data="M0,0 L6,4.5 L0,9z" Width="6" Height="9" Fill="#FF767676" />
+                </telerik:RadButton>
+            </StackPanel>
+        </Grid>
+
+
+        <!--RadRibbonView-->
+        <telerik:RadRibbonView Grid.ColumnSpan="3" ApplicationName="TV Schedule">
+
+            <telerik:RadRibbonTab Header="Home" telerik:KeyTipService.AccessText="H">
+                <telerik:RadRibbonGroup Header="Appointments">
+                    <telerik:RadRibbonButton Text="New Appointment" Command="scheduleView:RadScheduleViewCommands.CreateAppointment" CommandTarget="{Binding ElementName=scheduleview}" LargeImage="/Calendar;component/Images/calendar_new.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor"  />
+                    <telerik:RadRibbonButton Text="Delete Appointment" Command="scheduleView:RadScheduleViewCommands.DeleteAppointment" CommandTarget="{Binding ElementName=scheduleview}" LargeImage="/Calendar;component/Images/calendar_Delete.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Go To">
+                    <telerik:RadRibbonButton Text="Today" Command="{Binding SetTodayCommand, Source={StaticResource ViewModel}}"   LargeImage="/Calendar;component/Images/calendar_today.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                    <telerik:RadRibbonButton Text="Next range" Command="scheduleView:RadScheduleViewCommands.IncreaseVisibleDateLarge" CommandTarget="{Binding ElementName=scheduleview}"  LargeImage="/Calendar;component/Images/calendar_next_range.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Views">
+                    <telerik:RadRibbonButton Text="Day View"  Command="scheduleView:RadScheduleViewCommands.SetDayViewMode" CommandTarget="{Binding ElementName=scheduleview}" LargeImage="/Calendar;component/Images/calendar_today.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                    <telerik:RadRibbonButton Text="Week View"  
+											 Command="{Binding SetWeekViewCommand, Source={StaticResource ViewModel}}" 
+											 CommandTarget="{Binding ElementName=scheduleview}" 
+											 CommandParameter="{Binding Path=ActiveViewDefinition, ElementName=scheduleview}"											    
+											 LargeImage="/Calendar;component/Images/calendar_week.png" Size="Large" 
+											 RenderOptions.BitmapScalingMode="NearestNeighbor" />
+
+                    <telerik:RadRibbonButton Text="Work Week"  
+											 Command="{Binding SetWorkWeekCommand, Source={StaticResource ViewModel}}"
+											 CommandParameter="{Binding Path=ActiveViewDefinition, ElementName=scheduleview}"
+											 CommandTarget="{Binding ElementName=scheduleview}"  
+											 LargeImage="/Calendar;component/Images/calendar_work.png" 
+											 Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+
+                    <telerik:RadRibbonButton Text="Month View"  Command="scheduleView:RadScheduleViewCommands.SetMonthViewMode" CommandTarget="{Binding ElementName=scheduleview}" LargeImage="/Calendar;component/Images/calendar_month.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                    <telerik:RadRibbonButton Text="Timeline View"  Command="scheduleView:RadScheduleViewCommands.SetTimelineViewMode" CommandTarget="{Binding ElementName=scheduleview}" LargeImage="/Calendar;component/Images/calendar_timeline.png" Size="Large" RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                </telerik:RadRibbonGroup>
+                <telerik:RadRibbonGroup Header="Markers">
+                    <telerik:RadCollapsiblePanel>
+                        <telerik:RadDropDownButton Content="Categorize" Width="136" MinHeight="22" BorderThickness="0" HorizontalContentAlignment="Left">
+                            <telerik:RadDropDownButton.DropDownContent>
+                                <telerik:RadContextMenu MinWidth="100" BorderThickness="0">
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource CategoryHeaderTemplate}" Command="{Binding SetCategoryCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:Category CategoryBrush="{StaticResource YellowCategoryBrush}" CategoryName="Yellow"/>
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource YellowCategoryBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource CategoryHeaderTemplate}"
+                                                         Command="{Binding SetCategoryCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:Category CategoryBrush="{StaticResource GreenCategoryBrush}" CategoryName="Green"/>
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource GreenCategoryBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource CategoryHeaderTemplate}"
+                                                         Command="{Binding SetCategoryCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:Category CategoryBrush="{StaticResource PurpleCategoryBrush}" CategoryName="Purple"/>
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource PurpleCategoryBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource CategoryHeaderTemplate}"
+                                                         Command="{Binding SetCategoryCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:Category CategoryBrush="{StaticResource PinkCategoryBrush}" CategoryName="Pink"/>
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource PinkCategoryBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                </telerik:RadContextMenu>
+                            </telerik:RadDropDownButton.DropDownContent>
+                        </telerik:RadDropDownButton>
+
+                        <telerik:RadDropDownButton Content="Time Markers" Width="136" MinHeight="22" BorderThickness="0" HorizontalContentAlignment="Left">
+                            <telerik:RadDropDownButton.DropDownContent>
+                                <telerik:RadContextMenu MinWidth="100" BorderThickness="0">
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource TimeMarkerHeaderTemplate}"
+                                                         Command="{Binding SetTimeMarkerCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:TimeMarker TimeMarkerName="Free" TimeMarkerBrush="{StaticResource FreeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource FreeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource TimeMarkerHeaderTemplate}"
+                                                         Command="{Binding SetTimeMarkerCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:TimeMarker TimeMarkerName="Busy" TimeMarkerBrush="{StaticResource BusyMarkerBrush}" />
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource BusyMarkerBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource TimeMarkerHeaderTemplate}"
+                                                         Command="{Binding SetTimeMarkerCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:TimeMarker TimeMarkerName="Tentative" TimeMarkerBrush="{StaticResource TentativeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource TentativeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                    <telerik:RadMenuItem HeaderTemplate="{StaticResource TimeMarkerHeaderTemplate}"
+                                                         Command="{Binding SetTimeMarkerCommand, Source={StaticResource ViewModel}}"
+							                             CommandParameter="{Binding Header, RelativeSource={RelativeSource Self} }">
+                                        <telerik:RadMenuItem.Header>
+                                            <telerik:TimeMarker TimeMarkerName="Out Of Office" TimeMarkerBrush="{StaticResource OutOfOfficeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Header>
+                                        <telerik:RadMenuItem.Icon>
+                                            <Rectangle Width="14" Height="14" Margin="3 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center" Fill="{StaticResource OutOfOfficeMarkerBrush}" />
+                                        </telerik:RadMenuItem.Icon>
+                                    </telerik:RadMenuItem>
+                                </telerik:RadContextMenu>
+                            </telerik:RadDropDownButton.DropDownContent>
+                        </telerik:RadDropDownButton>
+                    </telerik:RadCollapsiblePanel>
+                </telerik:RadRibbonGroup>
+            </telerik:RadRibbonTab>
+        </telerik:RadRibbonView>
+    </Grid>
+</UserControl>

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CF03BF55-8FE0-45D1-A0BE-BB39F4DB16A4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tools</RootNamespace>
+    <AssemblyName>Tools</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Image\Tools.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="QuickStart.Common">
+      <HintPath>d:\Hamed\Documents\visual studio 2017\lib\telerik\QuickStart.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Docking.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Expressions, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Expressions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FileDialogs, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.FileDialogs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.GridView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView.Export, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.GridView.Export.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Input.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Diagrams.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents, Version=2019.1.220.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Fixed.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Themes.Fluent">
+      <HintPath>..\lib\RCWPF\2019.1.220.45.NoXaml\Telerik.Windows.Themes.Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2019.1.215.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCWPF\2019.1.220.45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ImageExampleHelper.cs" />
+    <Compile Include="ShellLink.cs" />
+    <Compile Include="StorageFile.cs" />
+    <Compile Include="Taskbar.cs" />
+    <Compile Include="View\Diagrams1.xaml.cs">
+      <DependentUpon>Diagrams1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Diagrams\Common\ExportToHTML\HTMLExportHelper.cs" />
+    <Compile Include="View\Diagrams\Common\ExtensionUtilities.cs" />
+    <Compile Include="View\Diagrams\Common\HierarchicalDataTemplate.cs" />
+    <Compile Include="View\Diagrams\Common\HtmlViewModel.cs" />
+    <Compile Include="View\Diagrams\Common\SampleItem.cs" />
+    <Compile Include="View\Diagrams\Common\SamplesFactory.cs" />
+    <Compile Include="View\Diagrams\Common\SamplesViewModel.cs" />
+    <Compile Include="View\Diagrams\PercentageConverter.cs" />
+    <Compile Include="View\DummyStorage.cs" />
+    <Compile Include="View\FileExplorer.xaml.cs">
+      <DependentUpon>FileExplorer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ImageEditor.xaml.cs">
+      <DependentUpon>ImageEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Mains.xaml.cs">
+      <DependentUpon>Mains.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PdfViewer.xaml.cs">
+      <DependentUpon>PdfViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelerikScenario1.xaml.cs">
+      <DependentUpon>TelerikScenario1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Word.xaml.cs">
+      <DependentUpon>Word.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Diagrams1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Diagrams\Common\Resources\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Diagrams\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Diagrams\Styls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\Diagrams\ToolboxItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="View\DictionaryIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\FileExplorer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ImageEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Mains.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PdfViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TelerikScenario1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\Word.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="hamed Logo.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Image\Diagrams.ico" />
+    <Resource Include="Image\Editor.ico" />
+    <Resource Include="Image\Explorer.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Image\Pdf.ico" />
+    <Resource Include="Image\Tools.ico" />
+    <Content Include="View\Diagrams\Common\ExportToHTML\ExportStyles.html" />
+    <Content Include="View\Diagrams\Common\ExportToHTML\Loader.js" />
+    <Content Include="View\Diagrams\Common\ExportToHTML\RadDiagram.js" />
+    <Content Include="View\Diagrams\Common\ExportToHTML\RadSVG.js" />
+    <Resource Include="View\Diagrams\Images\Light\32\export.png" />
+    <Resource Include="View\Diagrams\Images\Light\32\exportHtml.png" />
+    <Resource Include="View\Diagrams\Images\Light\32\print.png" />
+    <Resource Include="View\Diagrams\Images\Light\bgColor.png" />
+    <Resource Include="View\Diagrams\Images\Light\Connection.png" />
+    <Resource Include="View\Diagrams\Images\Light\copy.png" />
+    <Resource Include="View\Diagrams\Images\Light\copy16.png" />
+    <Resource Include="View\Diagrams\Images\Light\export.png" />
+    <Resource Include="View\Diagrams\Images\Light\GridColor.png" />
+    <Resource Include="View\Diagrams\Images\Light\image.png" />
+    <Resource Include="View\Diagrams\Images\Light\new.png" />
+    <Resource Include="View\Diagrams\Images\Light\open.png" />
+    <Resource Include="View\Diagrams\Images\Light\paste.png" />
+    <Resource Include="View\Diagrams\Images\Light\print.png" />
+    <Resource Include="View\Diagrams\Images\Light\save.png" />
+    <Resource Include="View\Diagrams\Images\Light\showGrid.png" />
+    <Resource Include="View\Diagrams\Images\Light\Snap_to_grid_big.png" />
+    <Resource Include="View\Diagrams\Images\Light\Snap_to_items_big.png" />
+    <Resource Include="View\Diagrams\Images\Light\zoom_to_fit.png" />
+    <Resource Include="View\Diagrams\Images\Dark\32\export.png" />
+    <Resource Include="View\Diagrams\Images\Dark\32\exportHtml.png" />
+    <Resource Include="View\Diagrams\Images\Dark\32\print.png" />
+    <Resource Include="View\Diagrams\Images\Dark\bgColor.png" />
+    <Resource Include="View\Diagrams\Images\Dark\Connection.png" />
+    <Resource Include="View\Diagrams\Images\Dark\copy.png" />
+    <Resource Include="View\Diagrams\Images\Dark\copy16.png" />
+    <Resource Include="View\Diagrams\Images\Dark\export.png" />
+    <Resource Include="View\Diagrams\Images\Dark\GridColor.png" />
+    <Resource Include="View\Diagrams\Images\Dark\image.png" />
+    <Resource Include="View\Diagrams\Images\Dark\new.png" />
+    <Resource Include="View\Diagrams\Images\Dark\open.png" />
+    <Resource Include="View\Diagrams\Images\Dark\paste.png" />
+    <Resource Include="View\Diagrams\Images\Dark\print.png" />
+    <Resource Include="View\Diagrams\Images\Dark\save.png" />
+    <Resource Include="View\Diagrams\Images\Dark\showGrid.png" />
+    <Resource Include="View\Diagrams\Images\Dark\Snap_to_grid_big.png" />
+    <Resource Include="View\Diagrams\Images\Dark\Snap_to_items_big.png" />
+    <Resource Include="View\Diagrams\Images\Dark\zoom_to_fit.png" />
+    <Resource Include="View\Diagrams\Images\32\align1.png" />
+    <Resource Include="View\Diagrams\Images\32\align2.png" />
+    <Resource Include="View\Diagrams\Images\32\align3.png" />
+    <Resource Include="View\Diagrams\Images\32\align4.png" />
+    <Resource Include="View\Diagrams\Images\32\align5.png" />
+    <Resource Include="View\Diagrams\Images\32\align6.png" />
+    <Resource Include="View\Diagrams\Images\32\bring_backward.png" />
+    <Resource Include="View\Diagrams\Images\32\bring_Forward.png" />
+    <Resource Include="View\Diagrams\Images\32\bring_top.png" />
+    <Resource Include="View\Diagrams\Images\32\layout.png" />
+    <Resource Include="View\Diagrams\Images\32\send_back.png" />
+    <Resource Include="View\Diagrams\Images\AppIcon.png" />
+    <Resource Include="View\Diagrams\Images\bezier.jpg" />
+    <Resource Include="View\Diagrams\Images\circle.jpg" />
+    <Resource Include="View\Diagrams\Images\cursor.png" />
+    <Resource Include="View\Diagrams\Images\cut.png" />
+    <Resource Include="View\Diagrams\Images\delete_disable.png" />
+    <Resource Include="View\Diagrams\Images\floorplan.jpg" />
+    <Resource Include="View\Diagrams\Images\flow.jpg" />
+    <Resource Include="View\Diagrams\Images\Group.png" />
+    <Resource Include="View\Diagrams\Images\logo.png" />
+    <Resource Include="View\Diagrams\Images\paste16.png" />
+    <Resource Include="View\Diagrams\Images\path_tool.png" />
+    <Resource Include="View\Diagrams\Images\pencil_tool.png" />
+    <Resource Include="View\Diagrams\Images\Pointer.png" />
+    <Resource Include="View\Diagrams\Images\Redo.png" />
+    <Resource Include="View\Diagrams\Images\rolls.jpg" />
+    <Resource Include="View\Diagrams\Images\Rotate_Enabled.png" />
+    <Resource Include="View\Diagrams\Images\simpleflow.jpg" />
+    <Resource Include="View\Diagrams\Images\stakeholder.jpg" />
+    <Resource Include="View\Diagrams\Images\Text.png" />
+    <Resource Include="View\Diagrams\Images\Transform_Enabled.png" />
+    <Resource Include="View\Diagrams\Images\Undo.png" />
+    <Resource Include="View\Diagrams\Images\Ungroup.png" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\Cycle3.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\FloorPlan.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\Flow2.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\Rolls.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\SimpleFlow.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\Stakeholder.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\Supply.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\SwimlaneDiagram.xml" />
+    <Resource Include="View\Diagrams\Common\SampleDiagrams\tableShape.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

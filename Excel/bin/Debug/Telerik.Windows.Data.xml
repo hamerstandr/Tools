@@ -4521,7 +4521,7 @@
             Filters the collection.
             </summary>
         </member>
-        <member name="M:Telerik.Windows.Data.IHierarchyFilter.Initialize(System.Collections.IEnumerable,System.ComponentModel.PropertyDescriptorCollection,System.Collections.Generic.IList{System.Object},System.Collections.Generic.IList{Telerik.Windows.Data.FieldDescriptorNamePair})">
+        <member name="M:Telerik.Windows.Data.IHierarchyFilter.Initialize(System.Collections.IEnumerable,System.ComponentModel.PropertyDescriptorCollection,System.Collections.Generic.IList{System.Object},System.Collections.Generic.IList{Telerik.Windows.Data.FieldDescriptorNamePair},System.Boolean)">
             <summary>
             Initializes the specified data.
             </summary>
@@ -4529,6 +4529,7 @@
             <param name="properties">The properties.</param>
             <param name="masterRecordValues">The master record values.</param>
             <param name="relationFieldNames">The relation field names.</param>
+            <param name="isSelfReference">Identifies whether this is a self reference hierarchy.</param>
         </member>
         <member name="T:Telerik.Windows.Data.HierarchyDescriptor`2">
             <summary>

@@ -4627,6 +4627,13 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Telerik.Windows.Controls.WindowBase.ShouldShowInTaskSwitcher">
+            <summary>
+            Indicates whether the Window should be present in the Task Switcher (Alt+Tab) menu of the Windows.
+            In order to hide it correctly, the Window shouldn't be shown in the taskbar (ShowInTaskbar property should be false).
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Telerik.Windows.Controls.WindowBase.ChangeVisualState(System.Boolean)">
             <summary>
             Updates the visual state of the control.
@@ -5032,6 +5039,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.RadDesktopAlert.CanMove"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadDesktopAlert.ShowInTaskSwitcherProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadDesktopAlert.ShowInTaskSwitcher"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadDesktopAlert.ShowCloseButtonProperty">
             <summary>
             Identifies the <see cref="P:Telerik.Windows.Controls.RadDesktopAlert.ShowCloseButton"/> dependency property.
@@ -5218,6 +5230,16 @@
             If the value of this property is <c>true</c>, the instance can be dragged; otherwise it is fixed.
             </remarks>
             <value><c>True</c> if this instance can be dragged; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadDesktopAlert.ShowInTaskSwitcher">
+            <summary>
+            Gets or sets a boolean value determining whether the <see cref="T:Telerik.Windows.Controls.RadDesktopAlert"/> would be visible in the Task Switcher (Alt+Tab) menu of the Windows.
+            The default value is <c>true</c>.
+            This is a dependency property.
+            </summary>
+            <remarks>
+            If the value of this property is <c>true</c>, the instance won't be hidden; otherwise would be hidden.
+            </remarks>
         </member>
         <member name="P:Telerik.Windows.Controls.RadDesktopAlert.ShowCloseButton">
             <summary>
@@ -8098,6 +8120,12 @@
             True if the item is (or is eligible to be) its own container; otherwise, false.
             </returns>
         </member>
+        <member name="M:Telerik.Windows.Controls.TabControl.RadTabControlBase.IsSelectionNonBoundAtClientSide">
+            <summary>
+            Determines of user has no bindings to SelectedIndex or SelectedItem properties.
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Telerik.Windows.Controls.TabControl.RadTabControlBase.ClearContentSafely">
             <summary>
             Clears all ContentPresenter elements inside the ContentElementStorage template part and clears the ContentElement template part.
@@ -8431,6 +8459,72 @@
             Gets or sets a value indicating whether the mouse button is pressed currently or not.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.PreviewTabClosedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.PreviewTabClosed"/> routed event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.TabClosedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.TabClosed"/> routed event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.PreviewTabPinnedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.PreviewTabPinned"/> routed event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.TabPinnedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.TabPinned"/> routed event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.PreviewTabUnpinnedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.PreviewTabUnpinned"/> routed event.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.TabUnpinnedEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabControl.TabUnpinned"/> routed event.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnPreviewTabClosed(Telerik.Windows.Controls.PreviewTabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PreviewTabClosed"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.PreviewTabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnTabClosed(Telerik.Windows.Controls.TabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:TabClosed"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.TabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnPreviewTabPinned(Telerik.Windows.Controls.PreviewTabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PreviewTabPinned"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.PreviewTabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnTabPinned(Telerik.Windows.Controls.TabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:TabPinned"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.TabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnPreviewTabUnpinned(Telerik.Windows.Controls.PreviewTabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PreviewTabUnpinned"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.PreviewTabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnTabUnpinned(Telerik.Windows.Controls.TabChangedEventArgs)">
+            <summary>
+            Raises the <see cref="E:TabUnpinned"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.TabChangedEventArgs"/> instance containing the event data.</param>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadTabControl.IsDropPointUnsafe(System.Windows.FrameworkElement,System.Windows.FrameworkElement,System.Windows.Point)">
             <summary>
             This method checks whether the destination object is going to appear under the mouse 
@@ -8609,6 +8703,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.RadTabControl.AllowDragOverTab"/> property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadTabControl.CloseTabsOnMouseMiddleButtonDownProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabControl.CloseTabsOnMouseMiddleButtonDown"/> property.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadTabControl.#cctor">
             <summary>
             Initializes static members of the <see cref="T:Telerik.Windows.Controls.RadTabControl"/> class.
@@ -8699,6 +8798,11 @@
             </summary>
             <param name="e">Information about the change.</param>
         </member>
+        <member name="M:Telerik.Windows.Controls.RadTabControl.OnScrollButtonsVisibilityChanged">
+            <summary>
+            Invoked when scroll buttons visibility changes.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadTabControl.ResolveScrollViewerOnLayoutUpdated(System.Object,System.EventArgs)">
             <summary>
             Retrieve the scroll viewer from the template. We are not using the standard way with x:Name and GetTemplateChild
@@ -8732,6 +8836,41 @@
         <member name="M:Telerik.Windows.Controls.RadTabControl.OnRightScrollButtonClick(System.Object,System.Windows.RoutedEventArgs)">
             <summary>
             Invoked when the right scroll button has been clicked.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.PreviewTabClosed">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be closed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.TabClosed">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is closed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.PreviewTabPinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be pinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.TabPinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is pinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.PreviewTabUnpinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be unpinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabControl.TabUnpinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is unpinned.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabControl.PinnedItems">
+            <summary>
+            Gets the collection of currently pinned <see cref="T:Telerik.Windows.Controls.RadTabItem"/>s.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadTabControl.DropDownButtonStyle">
@@ -8947,6 +9086,11 @@
                     The default value is <strong>false</strong>.
                 </para>
             </remarks>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabControl.CloseTabsOnMouseMiddleButtonDown">
+            <summary>
+            Gets or sets a value indicating whether user can close tabs by clicking the mouse middle button over a particular <see cref="T:Telerik.Windows.Controls.RadTabItem"/>.
+            </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadTabControl.ScrollMode">
             <summary>
@@ -15323,6 +15467,1138 @@
             <param name="sender">The source of the event.</param>
             <param name="e">The event data.</param>
         </member>
+        <member name="T:Telerik.Windows.Automation.Peers.RadTabbedWindowAutomationPeer">
+            <summary>
+            The AutomationPeer associated with the <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/> class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer">
+            <summary>
+            The AutomationPeer associated with the <see cref="T:Telerik.Windows.Controls.RadWindow"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer.#ctor(Telerik.Windows.Controls.RadWindow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer"/> class.
+            </summary>
+            <param name="window">The owner <see cref="T:Telerik.Windows.Controls.RadWindow"/> instance.</param>
+        </member>
+        <member name="M:Telerik.Windows.Automation.Peers.RadTabbedWindowAutomationPeer.#ctor(Telerik.Windows.Controls.RadTabbedWindow)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Automation.Peers.RadTabbedWindowAutomationPeer"/> class.
+            </summary>
+            <param name="tabbedWindow">The owner <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/> instance.</param>
+        </member>
+        <member name="M:Telerik.Windows.Automation.Peers.RadTabbedWindowAutomationPeer.GetChildrenCore">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.DragDrop.DragDropMode">
+            <summary>
+            Specifies the drag drop mode for <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/>.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.DragDrop.DragDropMode.None">
+            <summary>
+            Drag drop is disabled.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.DragDrop.DragDropMode.Reorder">
+            <summary>
+            Reorder in tab strip is allowed only.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.DragDrop.DragDropMode.Default">
+            <summary>
+            DragReorder and drag out of TabControl is allowed (like in modern browsers).
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo">
+            <summary>
+            Class which provides all needed information for drag drop of tabs between and inside <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/>s.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.DraggedTab">
+            <summary>
+            The dragged <see cref="T:Telerik.Windows.Controls.RadTabItem"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.SourceTabControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.SourceWindow">
+            <summary>
+            The source window of the dragged tab.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.IsDropInTabStripSuccessful">
+            <summary>
+            Indicates the drop operations is successful - dragged item is dropped onto target TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.IsDropBeforeItem">
+            <summary>
+            Indicates whether drop is before or after the target item.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabItemDragDropInfo.RelativeStartPoint">
+            <summary>
+            The relative drag start point in the dragged tab.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs">
+            <summary>
+            Event args used when new tabbed window is created via drag drop operation.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.#ctor(Telerik.Windows.Controls.RadTabbedWindow,Telerik.Windows.Controls.RadTabbedWindow,Telerik.Windows.Controls.RadTabItem,System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.#ctor(Telerik.Windows.Controls.RadTabbedWindow,Telerik.Windows.Controls.RadTabbedWindow,System.Object,System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.SourceWindow">
+            <summary>
+            The source window from which the drag drop operation is started.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.NewWindow">
+            <summary>
+            The new window created via drag drop operation.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.DraggedTab">
+            <summary>
+            The dragged <see cref="T:Telerik.Windows.Controls.RadTabItem"/> from source <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/>.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.DraggedItem">
+            <summary>
+            The dragged <see cref="T:Telerik.Windows.Controls.RadTabItem"/> in unbound scenario or the dragged item (ViewModel) in databinding scenario.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether adding the new tab via add button should be cancelled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs">
+            <summary>
+            Event args used when new tab is being added via the 'Add' button in the UI.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs.#ctor(System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether adding the new tab via add button should be cancelled.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs.Item">
+            <summary>
+            This will be the new <see cref="T:Telerik.Windows.Controls.RadTabItem"/> created internally or the ViewModel user should provide in databinding scenarios.
+            User can set properties to the <see cref="T:Telerik.Windows.Controls.RadTabItem"/> like Header, Content or provide new instance of ViewModel to be added in the ItemsSource collection.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.Primitives.RadBrowserPanel">
+            <summary>
+            Panel simulating tabs behavior in modern browsers.
+            Until min width is reached, adding new items makes the items smaller, to fit in the available width.
+            When min width cannot be guaranteed, ScrollViewer becomes visible.
+            This panel expects it hosts items from ItemsPresenter which is inside ScrollViewer.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Primitives.RadBrowserPanel.ItemWidthProperty">
+            <summary>
+            Identifies the ItemWidth property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.Primitives.RadBrowserPanel.ItemMinWidthProperty">
+            <summary>
+            Identifies the ItemMinWidth property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Primitives.RadBrowserPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.Primitives.RadBrowserPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.Primitives.RadBrowserPanel.MeasureOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.Primitives.RadBrowserPanel.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.Primitives.RadBrowserPanel.ItemMinWidth">
+            <summary>
+            The default desired minimum width of the items in the panel.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.Primitives.RadBrowserPanel.ItemWidth">
+            <summary>
+            The default desired width of items in the panel.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel">
+            <summary>
+            Default panel for <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/> which hosts tabs, ScrollViewer buttons add tabs button.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel"/> class.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ScrollHorizontal(System.Double)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ScrollVertical(System.Double)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.TransformFromDropTargetToViewPort(System.Windows.Point)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.MeasureOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ViewportHeight">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ViewportWidth">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.HorizontalOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.VerticalOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ExtentHeight">
+            <inheritdoc />
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.Panels.RadTabbedWindowPanel.ExtentWidth">
+            <inheritdoc />
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadTabbedWindow">
+            <summary>
+            A Window component which hosts <see cref="T:Telerik.Windows.Controls.RadTabControl"/> and simulates browser behavior.
+            Tabs can be selected, pinned, unpinned, closed, reordered.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.RadWindow">
+            <summary>
+            This class represents an interactive window and provides static methods
+            for showing standard dialog windows - Alert, Confirm and Prompt.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(System.Object)">
+            <summary>
+            Opens an Alert modal window.
+            </summary>
+            <param name="content">The content to be displayed.</param>
+            <remarks>
+            Use this method to populate Alert message that informs the user for a specific problem
+            or warning.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
+            <summary>
+            Opens an Alert modal window.
+            </summary>
+            <param name="content">The content to be displayed.</param>
+            <param name="closed">Represents the method that will handle the closed event.</param>
+            <remarks>
+            Use this method to populate Alert message that informs the user for a specific problem
+            or warning.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(Telerik.Windows.Controls.DialogParameters)">
+            <summary>
+            Opens an Alert modal window.
+            </summary>
+            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
+            <remarks>
+            Use this method to populate Alert message that informs the user for a specific problem
+            or warning.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
+            <summary>
+            Opens a Prompt modal window.
+            </summary>
+            <param name="content">Question to the user.</param>
+            <param name="closed">Represents the method that will handle the closed event.</param>
+            <remarks>
+            Use this method to populate Prompt message that requires the user to enter specific value.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs},System.String)">
+            <summary>
+            Opens a Prompt modal window.
+            </summary>
+            <param name="content">Question to the user.</param>
+            <param name="closed">Represents the method that will handle the closed event.</param>
+            <param name="defaultPromptResult">The default prompt result value that will appear in the textbox.</param>
+            <remarks>
+            Use this method to populate Prompt message that requires the user to enter specific value.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(Telerik.Windows.Controls.DialogParameters)">
+            <summary>
+            Opens a Prompt modal window.
+            </summary>
+            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Confirm(Telerik.Windows.Controls.DialogParameters)">
+            <summary>
+            Opens a Confirm modal window.
+            </summary>
+            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
+            <remarks>
+            Use this method to populate Confirm message that request the user to
+            confirm some actions.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Confirm(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
+            <summary>
+            Opens a Confirm modal window.
+            </summary>
+            <param name="content">The content to be displayed.</param>
+            <param name="closed">Represents the method that will handle the closed event.</param>
+            <remarks>
+            Use this method to populate Confirm message that request the user to
+            confirm some actions.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.ConfigureModal(Telerik.Windows.Controls.RadAlert,Telerik.Windows.Controls.DialogParameters)">
+            <summary>
+            
+            </summary>
+            <param name="content"></param>
+            <param name="dialogParams"></param>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.ResponseButtonProperty">
+            <summary>
+            Identifies the <see>ResponseButton</see> Property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.ModalBackgroundProperty">
+            <summary>
+            Identifies the <see>ModalBackground</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.IconProperty">
+            <summary>
+            Identifies the <see>Icon</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.IconTemplateProperty">
+            <summary>
+            Identifies the <see>IconTemplate</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.WindowStartupLocationProperty">
+            <summary>
+            Identifies the <see>WindowStartupLocation</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.DialogResultProperty">
+            <summary>
+            Identifies the <see>DialogResult</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.PromptResultProperty">
+            <summary>
+            Identifies the <see>PromptResult</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.BorderBackgroundProperty">
+            <summary>
+            Identifies the <see>BorderBackground</see> dependency property. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.RestoreMinimizedLocationProperty">
+            <summary>
+            Identifies the <see>RestoreMinimizedLocation</see> Property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.IsRestrictedProperty">
+            <summary>
+            Identifies the <see>IsRestricted</see> Property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.RestrictedAreaMarginProperty">
+            <summary>
+            Identifies the <see>RestrictedAreaMargin</see> Property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.IsRestrictedWhenMaximizedProperty">
+            <summary>
+            Identifies the <see>IsRestrictedWhenMaximized</see> Property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadWindow.ShouldUpdateActiveStateProperty">
+            <summary>
+            Identifies the <see>ShouldUpdateActiveState</see> Property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.#ctor">
+            <summary>
+            Initializes a new instance of the RadWindow class.
+            </summary>
+            <remarks>
+             Use this constructor to create an instance of the <strong>RadWindow</strong>. In order for the 
+             RadWindow to be displayed, it is not necessary to add it to the visual tree.
+            </remarks>
+            <example>
+            <code lang="CS">
+            RadWindow window = new RadWindow();
+            </code>
+            <code lang="VB">
+            Dim window As RadWindow = New RadWindow
+            </code>
+            </example>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.GetParentRadWindow(System.Windows.DependencyObject)">
+            <summary>  
+            This walks the visual tree for a parent of a specific type.
+            </summary>  
+            <param name="child">The object which parent is searched.</param>  
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.GetResponseButton(System.Windows.DependencyObject)">
+            <summary>
+            Gets the response button.
+            </summary>
+            <param name="button">The button.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.SetResponseButton(System.Windows.DependencyObject,Telerik.Windows.Controls.ResponseButton)">
+            <summary>
+            Sets the response button.
+            </summary>
+            <param name="button">The button.</param>
+            <param name="value">The ResponseButton value.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnApplyTemplate">
+            <summary>
+                When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) 
+                call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.Show">
+            <summary>
+            Opens <strong>RadWindow</strong> in case it hasn't been already opened.
+            </summary>
+            <example>
+            <code lang="CS">
+            RadWindow window = new RadWindow();
+            window.Height = 100;
+            window.Width = 100;
+            window.Header = "RadWindow";
+            window.Content = "This is your content";
+            window.Show();
+            </code>
+            <code lang="VB">
+            Dim window As RadWindow = New RadWindow
+            window.Height = 100
+            window.Width = 100
+            window.Header = "RadWindow"
+            window.Content = "This is your content"
+            window.Show()
+            </code>
+            </example>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.ShowDialog">
+            <summary>
+            Opens modal <strong>RadWindow</strong> in case it hasn't been already opened.
+            </summary>
+            <example>
+            <code lang="CS">
+            RadWindow window = new RadWindow();
+            window.Height = 100;
+            window.Width = 100;
+            window.Header = "RadWindow";
+            window.Content = "This is your content";
+            window.ShowDialog();
+            </code>
+            <code lang="VB">
+            Dim window As RadWindow = New RadWindow
+            window.Height = 100
+            window.Width = 100
+            window.Header = "RadWindow"
+            window.Content = "This is your content"
+            window.ShowDialog()
+            </code>
+            </example>
+            <returns>A System.Nullable value of type System.Boolean that determines how the dialog was closed.</returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.UpdatePositionHelper(Telerik.Windows.Controls.Navigation.Positioning.PositionHelper)">
+            <summary>
+            Updates the Position helper with the actual data connected with restricted area, application size and location and whether the
+            window should be restricted or not.
+            </summary>
+            <param name="helper">The helper to be updated.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.ShouldFocusOnActivate">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.ChangeVisualState(System.Boolean)">
+            <summary>
+            Updates the visual state of the control.
+            </summary>
+            <param name="useTransitions">Indicates whether transitions should be used.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event and sets <see cref="P:System.Windows.FrameworkElement.DefaultStyleKey"/> from the active theme.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnPreviewClosed(Telerik.Windows.Controls.WindowPreviewClosedEventArgs)">
+            <summary>
+            Raises the <see cref="E:PreviewClose"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.WindowPreviewClosedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosed(Telerik.Windows.Controls.WindowClosedEventArgs)">
+            <summary>
+            Raises the <see cref="E:Closed"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.WindowClosedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnHostCreated(Telerik.Windows.Controls.HostWindowCreatedEventArgs)">
+            <summary>
+            Raises the <see cref="E:HostCreated"/> event.
+            </summary>
+            <param name="args">The <see cref="T:Telerik.Windows.Controls.HostWindowCreatedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
+            </summary>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosing">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnPreviewClosed">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnWindowStateChanged(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:WindowStateChanged"/> event.
+            </summary>
+            <param name="args">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.GetWindowOwner">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.GetWindowStartupLocation">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnCreateAutomationPeer">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadWindow.OnWindowStartupLocationChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary> 
+                WindowStartupLocation property changed handler. 
+            </summary>
+            <param name="d"><Strong>RadWindow</Strong> that changed its <see>WindowStartupLocation</see> property.</param> 
+            <param name="e">DependencyPropertyChangedEventArgs.</param>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadWindow.Closed">
+            <summary>
+            Occurs when the RadWindow is closed.
+            </summary>
+            <remarks>
+            The event is raised right next after the <see>PreviewClosed</see> event. Both events are raise by
+            <see>Close</see> method.
+            </remarks>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadWindow.PreviewClosed">
+            <summary>
+            Occurs when the RadWindow is closing.
+            </summary>
+            <remarks>
+            The event is raised whenever the <see>Close</see> method is invoked.
+            </remarks>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadWindow.HostCreated">
+            <summary>
+            Occurs when the "Host" <see cref="T:System.Windows.Window"/> instance is created.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.DefaultSizeRatio">
+            <summary>
+            Gets a size ratio when the window has infinity size and it is not restricted. The window size depends on root size and the default ratio.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.BorderBackground">
+            <summary>
+            Gets or sets a brush to be used to draw the title of <Strong>RadWindow</Strong>.
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.ModalBackground">
+            <summary>
+            Gets or sets a brush for the modal background of <Strong>RadWindow</Strong>. 
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.IconTemplate">
+            <summary>
+            Gets or sets the IconTemplate property. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.Icon">
+            <summary>
+            Gets or sets the Icon image to appear in the <Strong>RadWindow</Strong> title bar. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.WindowStartupLocation">
+            <summary>
+            Gets or sets a WindowStartupLocation value for the <Strong>RadWindow</Strong>. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.DialogResult">
+            <summary>
+            Gets or sets a DialogResult value for the <Strong>RadWindow</Strong>. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.PromptResult">
+            <summary>
+            Gets or sets a PromptResult value for the <Strong>RadWindow</Strong>. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.RestoreMinimizedLocation">
+            <summary>
+            Gets or sets the value which determines whether the window preserves
+            its size and location when WindowState property is changed. This is a dependency property.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.IsRestricted">
+            <summary>
+            Gets or sets a value indicating whether this instance is restricted.
+            </summary>
+            <value>
+            	<c>True</c> if this instance is restricted; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.RestrictedAreaMargin">
+            <summary>
+            Gets or sets the restricted area margin.
+            </summary>
+            <value>The restricted area margin.</value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.IsRestrictedWhenMaximized">
+            <summary>
+            Gets or sets whether when maximized the window to be restricted.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadWindow.ShouldUpdateActiveState">
+            <summary>
+            Gets or sets value indicating whether the visual active state of RadWindow should be updated to inactive state.
+            By default is true. If set to false RadWindow will appear always visually active.
+            This is a dependency property.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.#ctor">
+            <summary>
+            Initializes a new instance of the RadTabbedWindow class.
+            </summary>
+            <remarks>
+             Use this constructor to create an instance of the <strong>RadTabbedWindow</strong>. In order for the 
+             RadTabbedWindow to be displayed, it is not necessary to add it to the visual tree.
+            </remarks>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.ResetTheme">
+            <summary>
+            Resets the theme.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnApplyTemplate">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event and sets <see cref="P:System.Windows.FrameworkElement.DefaultStyleKey"/> from the active theme.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnWindowStateChanged(System.EventArgs)">
+            <summary>
+            Occurs when WindowState is changed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>
+            Occurs when the render sized is changed.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnCreateAutomationPeer">
+            <summary>
+            Returns class-specific System.Windows.Automation.Peers.AutomationPeer implementations for the Windows Presentation Foundation (WPF) infrastructure.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadTabbedWindow.OnTabbedWindowCreating(Telerik.Windows.Controls.TabbedWindow.TabbedWindowCreatingEventArgs)">
+            <summary>
+            Occurs when new <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/> is created with drag drop operation.
+            </summary>
+            <returns>Returns True if user has not canceled the creation.</returns>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemsSourceProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemsSource"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplateProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplate"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplateSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplateSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyle"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyleSelectorProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyleSelector"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemsPanelProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemsPanel"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemWidthProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemWidth"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ItemMinWidthProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.ItemMinWidth"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.DisplayMemberPathProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.DisplayMemberPath"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.DragDropModeProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.DragDropMode"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.ScrollModeProperty">
+            <summary>
+            Identifies the <see cref="F:Telerik.Windows.Controls.RadTabbedWindow.ScrollModeProperty"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.AddButtonVisibilityProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.AddButtonVisibility"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.AddButtonStyleProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.AddButtonStyle"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.SelectedItemProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedItem"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.SelectedIndexProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedIndex"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.SelectedItemRemoveBehaviourProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedItemRemoveBehaviour"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.IsContentPreservedProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.IsContentPreserved"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabbedWindow.TabbedWindowCreatingEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.RadTabbedWindow.TabbedWindowCreating"/> routed event.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.ItemsChanged">
+            <summary>
+            Occurs when <see cref="P:Telerik.Windows.Controls.RadTabbedWindow.Items"/> collection of <see cref="T:Telerik.Windows.Controls.RadTabItem"/>s is changed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.TabbedWindowCreating">
+            <summary>
+            Occurs when a new <see cref="T:Telerik.Windows.Controls.RadTabbedWindow"/> is created via drag drop and is about to be shown.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.SelectionChanged">
+            <summary>
+            Occurs when a changed has been made to the selection. This is a RoutedEvent.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.PreviewSelectionChanged">
+            <summary>
+            The preview event for <see cref="E:Telerik.Windows.Controls.RadTabbedWindow.SelectionChanged"/> event. Handling this event rollbacks the selection. This is a RoutedEvent.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.AddingNewTab">
+            <summary>
+            Occurs when <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is being added via the 'Add' button in the UI.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.PreviewTabClosed">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be closed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.TabClosed">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is closed.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.PreviewTabPinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be pinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.TabPinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is pinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.PreviewTabUnpinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be unpinned.
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.RadTabbedWindow.TabUnpinned">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is unpinned.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.PinnedItems">
+            <summary>
+            Gets the collection of currently pinned <see cref="T:Telerik.Windows.Controls.RadTabItem"/>s.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.Content">
+            <summary>
+            This property does not apply to RadTabbedWindow. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.Items">
+            <summary>
+            Gets the Items of the inner <see cref="T:Telerik.Windows.Controls.RadTabControl"/>.
+            They can be populated either in XAML or in code.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemsSource">
+            <summary>
+            Gets or sets the ItemsSource of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.DisplayMemberPath">
+            <summary>
+            Gets or sets the DisplayMemberPath of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.AddButtonVisibility">
+            <summary>
+            Gets or sets the AddButtonVisibility.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplate">
+            <summary>
+            Gets or sets the ItemTemplate of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemTemplateSelector">
+            <summary>
+            Gets or sets the ItemTemplateSelector of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyle">
+            <summary>
+            Gets or sets the ItemContainerStyle of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemContainerStyleSelector">
+            <summary>
+            Gets or sets the ItemContainerStyleSelector of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemsPanel">
+            <summary>
+            Gets or sets the ItemsPanel of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemWidth">
+            <summary>
+            Gets or sets the default width of the tab items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ItemMinWidth">
+            <summary>
+            Gets or sets the minimum width of the tab items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.DragDropMode">
+            <summary>
+            Gets or sets a value indicating the current drag drop mode.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.ScrollMode">
+            <summary>
+            Gets or sets the type of scrolling that will occur when the user presses the scroll buttons.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.AddButtonStyle">
+            <summary>
+            Gets or sets the style of the add tabs button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedItem">
+            <summary>
+            Gets or sets the selected item of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedIndex">
+            <summary>
+            Gets or sets the selected index of the TabControl.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.IsContentPreserved">
+            <summary>
+            Gets or sets a value indicating whether the state of the content will be preserved when selection is changed.
+            </summary>
+            <value>
+            	<c>True</c> if the first tab will preserve the content state; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabbedWindow.SelectedItemRemoveBehaviour">
+            <summary>
+            Determines what item should be selected when SelectedItem is removed.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl">
+            <summary>
+            TabControl which provides additional 'Add Tabs' button and hosts the tabs in <see cref="T:Telerik.Windows.Controls.Primitives.RadBrowserPanel"/> which simulates the tabs behavior of modern browsers.
+            Also it provides 'AdditionalLeftContent' which serves for adding UI elements on left of the tabs.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AdditionalLeftContentProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AdditionalLeftContent"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonVisibilityProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonVisibility"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemWidthProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemWidth"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemMinWidthProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemMinWidth"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonStyleProperty">
+            <summary>
+            Registers the <see cref="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonStyle"/> property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddingNewTabEvent">
+            <summary>
+            Registers the <see cref="E:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddingNewTab"/> routed event.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.OnApplyTemplate">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.OnInitialized(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event and sets <see cref="P:System.Windows.FrameworkElement.DefaultStyleKey"/> from the active theme.
+            </summary>
+            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.OnAddingNewItem(Telerik.Windows.Controls.TabbedWindow.AddingNewTabEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.OnScrollButtonsVisibilityChanged">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.OnItemsChanged(System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.IsSelectionNonBoundAtClientSide">
+            <inheritdoc />
+        </member>
+        <member name="E:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemsChanged">
+            <summary>
+            Occurs when items are changed (reset, added, removed).
+            </summary>
+        </member>
+        <member name="E:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddingNewTab">
+            <summary>
+            Occurs when a <see cref="T:Telerik.Windows.Controls.RadTabItem"/> is about to be created via the Add button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AdditionalLeftContent">
+            <summary>
+            Gets or sets the AdditionalLeftContent.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonVisibility">
+            <summary>
+            Gets or sets the AddButtonVisibility.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.AddButtonStyle">
+            <summary>
+            Gets or sets the style of the add tabs button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemWidth">
+            <summary>
+            Gets or sets the default width of the tab items.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabbedWindow.TabbedWindowTabControl.ItemMinWidth">
+            <summary>
+            Gets or sets the minimum width of the tab items.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.PreviewTabChangedEventArgs">
+            <summary>
+            Preview event args wrapping tab item that has been changed (Closed, Pinned, Unpinned).
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabChangedEventArgs">
+            <summary>
+            Event args wrapping the <see cref="T:Telerik.Windows.Controls.RadTabItem"/> that has been changed (Closed / Pinned / Unpinned).
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabChangedEventArgs.#ctor(Telerik.Windows.Controls.RadTabItem,System.Object,System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.TabChangedEventArgs"/> class.
+            </summary>
+            <param name="tabItem">The RadTabItem that is changed.</param>
+            <param name="dataContext">The DataContext of the tab item.</param>
+            <param name="routedEvent">The type of the event.</param>
+            <param name="source">The source of the event.</param>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabChangedEventArgs.TabItem">
+            <summary>
+            The <see cref="T:Telerik.Windows.Controls.RadTabItem"/> that has been changed.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabChangedEventArgs.DataContext">
+            <summary>
+            The DataContext (if any) of the changed <see cref="P:Telerik.Windows.Controls.TabChangedEventArgs.TabItem"/>.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.PreviewTabChangedEventArgs.#ctor(Telerik.Windows.Controls.RadTabItem,System.Object,System.Windows.RoutedEvent,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Telerik.Windows.Controls.PreviewTabChangedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.PreviewTabChangedEventArgs.Cancel">
+            <summary>
+            Gets or sets a value indicating whether the <see cref="T:Telerik.Windows.Controls.RadTabItem"/> change (close / pin / unpin) operation will be canceled.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.TabControl.TabItemCommands">
+            <summary>
+            <see cref="T:Telerik.Windows.Controls.RadTabItem"/> related commands.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.TabControl.TabItemCommands.#cctor">
+            <summary>
+            Initializes static members of the <see cref="T:Telerik.Windows.Controls.TabControl.TabItemCommands"/> class.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabControl.TabItemCommands.Close">
+            <summary>
+            Gets the Close command.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.TabControl.TabItemCommands.TogglePin">
+            <summary>
+            Gets the Pin command.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.RadTileView">
             <summary>An items control that is suitable for building interactive dashboard-like layouts.</summary>
             <remarks>
@@ -17600,6 +18876,21 @@
             </summary>
             <seealso cref="P:Telerik.Windows.Controls.RadTabItem.IsBreak"/>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadTabItem.IsPinnedProperty">
+            <summary>
+            Identifies the <c cref="P:Telerik.Windows.Controls.RadTabItem.IsPinned"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabItem.PinButtonVisibilityProperty">
+            <summary>
+            Identifies the <c cref="P:Telerik.Windows.Controls.RadTabItem.PinButtonVisibility"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadTabItem.CloseButtonVisibilityProperty">
+            <summary>
+            Identifies the <c cref="P:Telerik.Windows.Controls.RadTabItem.CloseButtonVisibility"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadTabItem.LeftTemplateProperty">
             <summary>
             Identifies the <c cref="P:Telerik.Windows.Controls.RadTabItem.LeftTemplate"/> property.
@@ -17842,6 +19133,21 @@
             <value>
               <c>true</c> if this instance is break; otherwise, <c>false</c>.
             </value>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabItem.IsPinned">
+            <summary>
+            Gets or sets a value indicating whether this tab item instance is pinned.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabItem.PinButtonVisibility">
+            <summary>
+            Gets or sets a value indicating the visibility of the pin button.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadTabItem.CloseButtonVisibility">
+            <summary>
+            Gets or sets a value indicating the visibility of the close button.
+            </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadTabItem.LeftTemplate">
             <summary>
@@ -22925,17 +24231,6 @@
             Expanded and indeterminate items are virtualized.
             </summary>
         </member>
-        <member name="T:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer">
-            <summary>
-            The AutomationPeer associated with the <see cref="T:Telerik.Windows.Controls.RadWindow"/> class.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer.#ctor(Telerik.Windows.Controls.RadWindow)">
-            <summary>
-            Initializes a new instance of the <see cref="T:Telerik.Windows.Automation.Peers.RadWindowAutomationPeer"/> class.
-            </summary>
-            <param name="window">The owner <see cref="T:Telerik.Windows.Controls.RadWindow"/> instance.</param>
-        </member>
         <member name="T:Telerik.Windows.Controls.InternalWindow.DragBehavior">
             <summary>
             
@@ -23447,459 +24742,6 @@
             Gets the IsRestrictedWhenMaximized property.
             </summary>
         </member>
-        <member name="T:Telerik.Windows.Controls.RadWindow">
-            <summary>
-            This class represents an interactive window and provides static methods
-            for showing standard dialog windows - Alert, Confirm and Prompt.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(System.Object)">
-            <summary>
-            Opens an Alert modal window.
-            </summary>
-            <param name="content">The content to be displayed.</param>
-            <remarks>
-            Use this method to populate Alert message that informs the user for a specific problem
-            or warning.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
-            <summary>
-            Opens an Alert modal window.
-            </summary>
-            <param name="content">The content to be displayed.</param>
-            <param name="closed">Represents the method that will handle the closed event.</param>
-            <remarks>
-            Use this method to populate Alert message that informs the user for a specific problem
-            or warning.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Alert(Telerik.Windows.Controls.DialogParameters)">
-            <summary>
-            Opens an Alert modal window.
-            </summary>
-            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
-            <remarks>
-            Use this method to populate Alert message that informs the user for a specific problem
-            or warning.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
-            <summary>
-            Opens a Prompt modal window.
-            </summary>
-            <param name="content">Question to the user.</param>
-            <param name="closed">Represents the method that will handle the closed event.</param>
-            <remarks>
-            Use this method to populate Prompt message that requires the user to enter specific value.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs},System.String)">
-            <summary>
-            Opens a Prompt modal window.
-            </summary>
-            <param name="content">Question to the user.</param>
-            <param name="closed">Represents the method that will handle the closed event.</param>
-            <param name="defaultPromptResult">The default prompt result value that will appear in the textbox.</param>
-            <remarks>
-            Use this method to populate Prompt message that requires the user to enter specific value.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Prompt(Telerik.Windows.Controls.DialogParameters)">
-            <summary>
-            Opens a Prompt modal window.
-            </summary>
-            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Confirm(Telerik.Windows.Controls.DialogParameters)">
-            <summary>
-            Opens a Confirm modal window.
-            </summary>
-            <param name="dialogParameters">Structure that holds all possible parameters for customizing dialog window.</param>
-            <remarks>
-            Use this method to populate Confirm message that request the user to
-            confirm some actions.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Confirm(System.Object,System.EventHandler{Telerik.Windows.Controls.WindowClosedEventArgs})">
-            <summary>
-            Opens a Confirm modal window.
-            </summary>
-            <param name="content">The content to be displayed.</param>
-            <param name="closed">Represents the method that will handle the closed event.</param>
-            <remarks>
-            Use this method to populate Confirm message that request the user to
-            confirm some actions.
-            </remarks>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ConfigureModal(Telerik.Windows.Controls.RadAlert,Telerik.Windows.Controls.DialogParameters)">
-            <summary>
-            
-            </summary>
-            <param name="content"></param>
-            <param name="dialogParams"></param>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.ResponseButtonProperty">
-            <summary>
-            Identifies the <see>ResponseButton</see> Property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.ModalBackgroundProperty">
-            <summary>
-            Identifies the <see>ModalBackground</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.IconProperty">
-            <summary>
-            Identifies the <see>Icon</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.IconTemplateProperty">
-            <summary>
-            Identifies the <see>IconTemplate</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.WindowStartupLocationProperty">
-            <summary>
-            Identifies the <see>WindowStartupLocation</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.DialogResultProperty">
-            <summary>
-            Identifies the <see>DialogResult</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.PromptResultProperty">
-            <summary>
-            Identifies the <see>PromptResult</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.BorderBackgroundProperty">
-            <summary>
-            Identifies the <see>BorderBackground</see> dependency property. 
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.RestoreMinimizedLocationProperty">
-            <summary>
-            Identifies the <see>RestoreMinimizedLocation</see> Property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.IsRestrictedProperty">
-            <summary>
-            Identifies the <see>IsRestricted</see> Property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.RestrictedAreaMarginProperty">
-            <summary>
-            Identifies the <see>RestrictedAreaMargin</see> Property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.IsRestrictedWhenMaximizedProperty">
-            <summary>
-            Identifies the <see>IsRestrictedWhenMaximized</see> Property.
-            </summary>
-        </member>
-        <member name="F:Telerik.Windows.Controls.RadWindow.ShouldUpdateActiveStateProperty">
-            <summary>
-            Identifies the <see>ShouldUpdateActiveState</see> Property.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.#ctor">
-            <summary>
-            Initializes a new instance of the RadWindow class.
-            </summary>
-            <remarks>
-             Use this constructor to create an instance of the <strong>RadWindow</strong>. In order for the 
-             RadWindow to be displayed, it is not necessary to add it to the visual tree.
-            </remarks>
-            <example>
-            <code lang="CS">
-            RadWindow window = new RadWindow();
-            </code>
-            <code lang="VB">
-            Dim window As RadWindow = New RadWindow
-            </code>
-            </example>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.GetParentRadWindow(System.Windows.DependencyObject)">
-            <summary>  
-            This walks the visual tree for a parent of a specific type.
-            </summary>  
-            <param name="child">The object which parent is searched.</param>  
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.GetResponseButton(System.Windows.DependencyObject)">
-            <summary>
-            Gets the response button.
-            </summary>
-            <param name="button">The button.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.SetResponseButton(System.Windows.DependencyObject,Telerik.Windows.Controls.ResponseButton)">
-            <summary>
-            Sets the response button.
-            </summary>
-            <param name="button">The button.</param>
-            <param name="value">The ResponseButton value.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnApplyTemplate">
-            <summary>
-                When overridden in a derived class, is invoked whenever application code or internal processes (such as a rebuilding layout pass) 
-                call <see cref="M:System.Windows.Controls.Control.ApplyTemplate"/>.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.Show">
-            <summary>
-            Opens <strong>RadWindow</strong> in case it hasn't been already opened.
-            </summary>
-            <example>
-            <code lang="CS">
-            RadWindow window = new RadWindow();
-            window.Height = 100;
-            window.Width = 100;
-            window.Header = "RadWindow";
-            window.Content = "This is your content";
-            window.Show();
-            </code>
-            <code lang="VB">
-            Dim window As RadWindow = New RadWindow
-            window.Height = 100
-            window.Width = 100
-            window.Header = "RadWindow"
-            window.Content = "This is your content"
-            window.Show()
-            </code>
-            </example>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ShowDialog">
-            <summary>
-            Opens modal <strong>RadWindow</strong> in case it hasn't been already opened.
-            </summary>
-            <example>
-            <code lang="CS">
-            RadWindow window = new RadWindow();
-            window.Height = 100;
-            window.Width = 100;
-            window.Header = "RadWindow";
-            window.Content = "This is your content";
-            window.ShowDialog();
-            </code>
-            <code lang="VB">
-            Dim window As RadWindow = New RadWindow
-            window.Height = 100
-            window.Width = 100
-            window.Header = "RadWindow"
-            window.Content = "This is your content"
-            window.ShowDialog()
-            </code>
-            </example>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ResetTheme">
-            <summary>
-            Resets the theme.
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.UpdatePositionHelper(Telerik.Windows.Controls.Navigation.Positioning.PositionHelper)">
-            <summary>
-            Updates the Position helper with the actual data connected with restricted area, application size and location and whether the
-            window should be restricted or not.
-            </summary>
-            <param name="helper">The helper to be updated.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ShouldFocusOnActivate">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.ChangeVisualState(System.Boolean)">
-            <summary>
-            Updates the visual state of the control.
-            </summary>
-            <param name="useTransitions">Indicates whether transitions should be used.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnInitialized(System.EventArgs)">
-            <summary>
-            Raises the <see cref="E:System.Windows.FrameworkElement.Initialized"/> event and sets <see cref="P:System.Windows.FrameworkElement.DefaultStyleKey"/> from the active theme.
-            </summary>
-            <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnPreviewClosed(Telerik.Windows.Controls.WindowPreviewClosedEventArgs)">
-            <summary>
-            Raises the <see cref="E:PreviewClose"/> event.
-            </summary>
-            <param name="args">The <see cref="T:Telerik.Windows.Controls.WindowPreviewClosedEventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosed(Telerik.Windows.Controls.WindowClosedEventArgs)">
-            <summary>
-            Raises the <see cref="E:Closed"/> event.
-            </summary>
-            <param name="args">The <see cref="T:Telerik.Windows.Controls.WindowClosedEventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnHostCreated(Telerik.Windows.Controls.HostWindowCreatedEventArgs)">
-            <summary>
-            Raises the <see cref="E:HostCreated"/> event.
-            </summary>
-            <param name="args">The <see cref="T:Telerik.Windows.Controls.HostWindowCreatedEventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnGotFocus(System.Windows.RoutedEventArgs)">
-            <summary>
-            Called before the <see cref="E:System.Windows.UIElement.GotFocus"/> event occurs.
-            </summary>
-            <param name="e">The data for the event.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnLostFocus(System.Windows.RoutedEventArgs)">
-            <summary>
-            Called before the <see cref="E:System.Windows.UIElement.LostFocus"/> event occurs.
-            </summary>
-            <param name="e">The data for the event.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnKeyDown(System.Windows.Input.KeyEventArgs)">
-            <summary>
-            Called before the <see cref="E:System.Windows.UIElement.KeyDown"/> event occurs.
-            </summary>
-            <param name="e">The data for the event.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosing">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnPreviewClosed">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnWindowStateChanged(System.EventArgs)">
-            <summary>
-            Raises the <see cref="E:WindowStateChanged"/> event.
-            </summary>
-            <param name="args">The <see cref="T:System.Windows.RoutedEventArgs"/> instance containing the event data.</param>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.GetWindowOwner">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.GetWindowStartupLocation">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnClosed">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnCreateAutomationPeer">
-            <inheritdoc />
-        </member>
-        <member name="M:Telerik.Windows.Controls.RadWindow.OnWindowStartupLocationChanged(System.Windows.DependencyObject,System.Windows.DependencyPropertyChangedEventArgs)">
-            <summary> 
-                WindowStartupLocation property changed handler. 
-            </summary>
-            <param name="d"><Strong>RadWindow</Strong> that changed its <see>WindowStartupLocation</see> property.</param> 
-            <param name="e">DependencyPropertyChangedEventArgs.</param>
-        </member>
-        <member name="E:Telerik.Windows.Controls.RadWindow.Closed">
-            <summary>
-            Occurs when the RadWindow is closed.
-            </summary>
-            <remarks>
-            The event is raised right next after the <see>PreviewClosed</see> event. Both events are raise by
-            <see>Close</see> method.
-            </remarks>
-        </member>
-        <member name="E:Telerik.Windows.Controls.RadWindow.PreviewClosed">
-            <summary>
-            Occurs when the RadWindow is closing.
-            </summary>
-            <remarks>
-            The event is raised whenever the <see>Close</see> method is invoked.
-            </remarks>
-        </member>
-        <member name="E:Telerik.Windows.Controls.RadWindow.HostCreated">
-            <summary>
-            Occurs when the "Host" <see cref="T:System.Windows.Window"/> instance is created.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.DefaultSizeRatio">
-            <summary>
-            Gets a size ratio when the window has infinity size and it is not restricted. The window size depends on root size and the default ratio.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.BorderBackground">
-            <summary>
-            Gets or sets a brush to be used to draw the title of <Strong>RadWindow</Strong>.
-            This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.ModalBackground">
-            <summary>
-            Gets or sets a brush for the modal background of <Strong>RadWindow</Strong>. 
-            This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.IconTemplate">
-            <summary>
-            Gets or sets the IconTemplate property. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.Icon">
-            <summary>
-            Gets or sets the Icon image to appear in the <Strong>RadWindow</Strong> title bar. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.WindowStartupLocation">
-            <summary>
-            Gets or sets a WindowStartupLocation value for the <Strong>RadWindow</Strong>. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.DialogResult">
-            <summary>
-            Gets or sets a DialogResult value for the <Strong>RadWindow</Strong>. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.PromptResult">
-            <summary>
-            Gets or sets a PromptResult value for the <Strong>RadWindow</Strong>. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.RestoreMinimizedLocation">
-            <summary>
-            Gets or sets the value which determines whether the window preserves
-            its size and location when WindowState property is changed. This is a dependency property.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.IsRestricted">
-            <summary>
-            Gets or sets a value indicating whether this instance is restricted.
-            </summary>
-            <value>
-            	<c>True</c> if this instance is restricted; otherwise, <c>false</c>.
-            </value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.RestrictedAreaMargin">
-            <summary>
-            Gets or sets the restricted area margin.
-            </summary>
-            <value>The restricted area margin.</value>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.IsRestrictedWhenMaximized">
-            <summary>
-            Gets or sets whether when maximized the window to be restricted.
-            </summary>
-        </member>
-        <member name="P:Telerik.Windows.Controls.RadWindow.ShouldUpdateActiveState">
-            <summary>
-            Gets or sets value indicating whether the visual active state of RadWindow should be updated to inactive state.
-            By default is true. If set to false RadWindow will appear always visually active.
-            This is a dependency property.
-            </summary>
-        </member>
         <member name="T:Telerik.Windows.Controls.SizeChangedEventManager">
             <summary>
             A SizeChangedEventManager class.
@@ -24060,6 +24902,27 @@
             <value>The default prompt result value shown in the Prompt dialog window.</value>
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.DialogParameters.DefaultFocusedButton">
+            <summary>
+            Sets the default focused response button type in the dialog window. 
+            If button with such response type is present in the ControlTemplate of the dialog it will be initially focused. 
+            If button with such response type is not present - the dialog will be initially focused.
+            <list type="bullet">
+            	<listheader>
+            		<description>By default:</description>
+            	</listheader>
+            	<item>
+            		<description>RadAlert has the Accept button focused.</description>
+            	</item>
+            	<item>
+            		<description>RadPrompt doesn't have focused button.</description>
+            	</item>
+            	<item>
+            		<description>RadConfirm has the Accept button focused.</description>
+            	</item>
+            </list>
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.RadAlert">
             <summary>
             RadAlert notifies the user according to its invocation parameters.
@@ -24093,6 +24956,11 @@
             This method is called just after the template is applied and is meant to setup the Ok and Cancel buttons. It should be removed for Q3 2011.
             </summary>
         </member>
+        <member name="M:Telerik.Windows.Controls.RadAlert.SetupDefaultFocusedElement">
+            <summary>
+            This method is called just after the template is applied and is meant to setup the default focused dialog button.
+            </summary>
+        </member>
         <member name="M:Telerik.Windows.Controls.RadAlert.OnOk(System.EventArgs)">
             <summary>
             Raises the <see cref="E:Ok"/> event.
@@ -24123,6 +24991,11 @@
         <member name="T:Telerik.Windows.Controls.RadConfirm">
             <summary>
             RadConfirm requests the user the confirm given question.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadConfirm.ContentAreaMarginProperty">
+            <summary>
+            Identifies the ContentAreaMargin dependency property.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.RadConfirm.#ctor">
@@ -24159,6 +25032,11 @@
             Occurs when the user presses the cancel button.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.RadConfirm.ContentAreaMargin">
+            <summary>
+            Gets or sets the Margin of ContentPresenter that represents the content area in the dialog.
+            </summary>
+        </member>
         <member name="T:Telerik.Windows.Controls.RadPrompt">
             <summary>
             RadPrompt exposes a textbox in which the user can put any value.
@@ -24185,6 +25063,11 @@
         <member name="M:Telerik.Windows.Controls.RadPrompt.SetupBindingsAndCommands">
             <summary>
             This method is called just after the template is applied and is meant to setup the Ok and Cancel buttons. It should be removed for Q3 2011.
+            </summary>
+        </member>
+        <member name="M:Telerik.Windows.Controls.RadPrompt.SetupDefaultFocusedElement">
+            <summary>
+            This method is called just after the template is applied and is meant to setup the default focused dialog button.
             </summary>
         </member>
         <member name="M:Telerik.Windows.Controls.RadPrompt.OnOk(System.EventArgs)">

@@ -1840,6 +1840,11 @@
             Gets or sets value that indicates whether text matching is case sensitive.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.GridView.SearchStateManager.SearchMode">
+            <summary>
+            Gets or sets value that indicates the current behavior of item matching while search is executed.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.GridView.SearchStateManager.HighlightMatches">
             <summary>
             Gets or sets a value that indicates whether matched items will be highlighted.
@@ -8895,7 +8900,7 @@
             </summary>
             <param name="e">GridViewColumnEventArgs containing the reordered column.</param>
         </member>
-        <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.ShowInsertRowIfNeeded">
+        <member name="M:Telerik.Windows.Controls.GridView.GridViewDataControl.ShowInsertRowIfNeeded(System.Nullable{Telerik.Windows.Controls.GridView.GridViewNewRowPosition})">
             <summary>
             Shows the new row; used in the unit tests.
             </summary>
@@ -15566,6 +15571,11 @@
             Identifies the <see cref="P:Telerik.Windows.Controls.RadGridView.CanUserSearch"/> dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadGridView.SearchModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadGridView.SearchMode"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadGridView.CanUserSearchInHiddenColumnsProperty">
             <summary>
             Represents the CanUserSearchInHiddenColumns DependencyProperty.
@@ -15619,6 +15629,11 @@
         <member name="P:Telerik.Windows.Controls.RadGridView.CanUserSearch">
             <summary>
             Gets or sets a value that indicates whether the user can open the SearchPanel by using the Ctrl+F combination. 
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadGridView.SearchMode">
+            <summary>
+            Gets or sets a value that represents the matching behavior when search operation is executed.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadGridView.CanUserSearchInHiddenColumns">
@@ -17800,6 +17815,11 @@
             Represents the NullText dependency property.
             </summary>
         </member>
+        <member name="F:Telerik.Windows.Controls.RadMultiColumnComboBox.SearchModeProperty">
+            <summary>
+            Identifies the <see cref="P:Telerik.Windows.Controls.RadMultiColumnComboBox.SearchMode"/> dependency property.
+            </summary>
+        </member>
         <member name="F:Telerik.Windows.Controls.RadMultiColumnComboBox.SelectionBoxTemplateProperty">
             <summary>
             Represents the SelectionBoxTemplate dependency property.
@@ -17823,6 +17843,11 @@
         <member name="F:Telerik.Windows.Controls.RadMultiColumnComboBox.DropDownElementStyleProperty">
             <summary>
             Represents the DropDownElementStyle dependency property.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.RadMultiColumnComboBox.OpenDropDownOnFocusProperty">
+            <summary>
+            Represents the OpenDropDownOnFocus dependency property.
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.RadMultiColumnComboBox.EditorMinWidthProperty">
@@ -18046,6 +18071,11 @@
             Gets or sets a DataTemplate that is used to display SearchAutoCompleteBoxItems' content.
             </summary>
         </member>
+        <member name="P:Telerik.Windows.Controls.RadMultiColumnComboBox.SearchMode">
+            <summary>
+            Gets or sets a value that represents the matching behavior when search operation is executed.
+            </summary>
+        </member>
         <member name="P:Telerik.Windows.Controls.RadMultiColumnComboBox.SelectionBoxTemplateSelector">
             <summary>
             Gets or sets a DataTemplateSelector that is used to display SearchAutoCompleteBoxItems' content.
@@ -18064,6 +18094,11 @@
         <member name="P:Telerik.Windows.Controls.RadMultiColumnComboBox.DropDownElementStyle">
             <summary>
             Gets or set a Style that is applied to the drop down element. TargetType should match accordingly.
+            </summary>
+        </member>
+        <member name="P:Telerik.Windows.Controls.RadMultiColumnComboBox.OpenDropDownOnFocus">
+            <summary>
+            Gets or set a value that indicates whether the drop down button will be expanded when control is focused.
             </summary>
         </member>
         <member name="P:Telerik.Windows.Controls.RadMultiColumnComboBox.EditorMinWidth">
@@ -18230,6 +18265,21 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Telerik.Windows.Controls.GridView.SearchMode">
+            <summary>
+            Represents different behaviors of item matching while search is executed.
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.SearchMode.MatchAnyTerm">
+            <summary>
+            Items match the search operation when they fulfill any of the search terms. 
+            </summary>
+        </member>
+        <member name="F:Telerik.Windows.Controls.GridView.SearchMode.MatchAllTerms">
+            <summary>
+            Items match the search operation only when they fulfill all of the search terms. 
             </summary>
         </member>
         <member name="F:Telerik.Windows.Controls.GridView.Selection.CellInfoCollectionChangeType.Critical">

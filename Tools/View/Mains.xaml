@@ -19,6 +19,9 @@
             <ListViewItem HorizontalContentAlignment="Center">
                 <Button Content="Diagrams" Click="Button_Click_3"/>
             </ListViewItem>
+            <!--<ListViewItem HorizontalContentAlignment="Center">
+                <Button Content="Editor" Click="Button_Click_4"/>
+            </ListViewItem>-->
         </ListView>
     </Grid>
 </UserControl>
